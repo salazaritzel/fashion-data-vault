@@ -1,0 +1,22 @@
+# Node.js
+node_modules/
+.next/
+out/
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Misc
+.DS_Store
