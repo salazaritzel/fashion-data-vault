@@ -1,0 +1,113 @@
+2025-11-05 09:45:00,757 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for Vogue
+2025-11-05 09:45:00,758 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed Vogue from: https://www.vogue.com/feed/rss
+2025-11-05 09:45:01,024 - app.services.adapters_source.base_rss_adapter - INFO - Validated 30 out of 30 entries successfully for Vogue
+2025-11-05 09:45:01,041 - app.services.adapters_source.base_rss_adapter - INFO - Normalized 30 out of 30 entries for Vogue
+2025-11-05 09:45:01,113 - app.services.adapters_source.base_rss_adapter - INFO - Batch save complete for Vogue. 1 entries saved.
+2025-11-05 09:45:01,113 - app.services.adapters_source.base_rss_adapter - INFO - Collection and saving to database complete for Vogue. Processed a total of 30 entries.
+2025-11-05 09:48:22,293 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for Vogue
+2025-11-05 09:48:22,293 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed Vogue from: https://www.vogue.com/feed/rss
+2025-11-05 09:48:22,570 - app.services.adapters_source.base_rss_adapter - INFO - Validated 30 out of 30 entries successfully for Vogue
+2025-11-05 09:48:22,587 - app.services.adapters_source.base_rss_adapter - INFO - Normalized 30 out of 30 entries for Vogue
+2025-11-05 09:48:22,627 - app.services.adapters_source.base_rss_adapter - INFO - Batch save complete for Vogue. 0 entries saved.
+2025-11-05 09:48:22,627 - app.services.adapters_source.base_rss_adapter - INFO - Collection and saving to database complete for Vogue. Processed a total of 30 entries.
+2025-11-05 10:04:23,048 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for Vogue
+2025-11-05 10:04:23,049 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed Vogue from: https://www.vogue.com/feed/rss
+2025-11-05 10:04:23,311 - app.services.adapters_source.base_rss_adapter - INFO - Validated 30 out of 30 entries successfully for Vogue
+2025-11-05 10:04:23,328 - app.services.adapters_source.base_rss_adapter - INFO - Normalized 30 out of 30 entries for Vogue
+2025-11-05 10:04:23,355 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/vintage-salons-popups: column "link" of relation "aggregates_trend" does not exist
+LINE 4:                 link, published_at, collected_at, metadata)
+                        ^
+2025-11-05 10:04:23,356 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/slideshow/olivier-rousteing-best-balmain-red-carpet-moments: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,356 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/slideshow/glamour-women-of-the-year-awards-2025: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,357 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/olivier-rousteings-best-balmain-moments-in-vogue: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,357 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/olivier-rousteing-exits-balmain: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,358 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/vital-impacts-launches-annual-print-initiative-featuring-jane-goodalls-signed-prints: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,358 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/steven-klein-vogue-book-interview: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,359 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/what-do-fashion-people-do-all-day-answers-from-the-spring-2026-runways: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,359 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/slideshow/best-minimalist-coats: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,359 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/wrong-coat-theory: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,360 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/no-strategy-is-the-strategy-kiko-kostadinov-on-opening-a-london-store-thats-also-much-more: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,360 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/tomorrow-inks-deal-with-japanese-designer-soshi-otsuki: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,361 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/what-should-they-wear-newly-elected-new-york-city-mayor-zohran-mamdani-and-his-wife-rama-duwaji-enter-the-spotlight: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,361 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/slideshow/chanel-academy-women-in-film-luncheon: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,362 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/zohran-mamdani-wins-new-york-city-mayoral-election: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,362 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/best-luxury-hair-brushes: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,363 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/best-cos-finds: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,363 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/required-reading-anika-jade-levy-flat-earth: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,363 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/kaia-gerber-party-style: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,364 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/slideshow/michelle-obama-cool-first-lady-style: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,364 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/dakota-johnson-hair-secrets: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,365 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/minimalist-holiday-outfit-ideas: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,365 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/best-black-coats: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,365 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/best-faux-furs: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,366 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/taylor-swift-gigi-hadid-square-toe-boot: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,366 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/best-party-dresses: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,367 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/slideshow/nypl-library-lions-gala-2025-bruce-springsteen: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,367 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/article/best-beauty-advent-calendars-2025: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,368 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/slideshow/allie-blitz-and-matt-ressler-wedding: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,368 - app.services.adapters_source.base_rss_adapter - WARNING - Failed to insert entry https://www.vogue.com/slideshow/adela-cfda-awards-2025-marc-jacobs-fashion: current transaction is aborted, commands ignored until end of transaction block
+2025-11-05 10:04:23,368 - app.services.adapters_source.base_rss_adapter - INFO - Batch save complete for Vogue. 0 entries saved.
+2025-11-05 10:04:23,369 - app.services.adapters_source.base_rss_adapter - INFO - Collection and saving to database complete for Vogue. Processed a total of 30 entries.
+2025-11-05 10:08:55,626 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for Vogue
+2025-11-05 10:08:55,627 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed Vogue from: https://www.vogue.com/feed/rss
+2025-11-05 10:08:55,873 - app.services.adapters_source.base_rss_adapter - INFO - Validated 30 out of 30 entries successfully for Vogue
+2025-11-05 10:08:55,890 - app.services.adapters_source.base_rss_adapter - INFO - Normalized 30 out of 30 entries for Vogue
+2025-11-05 10:08:55,931 - app.services.adapters_source.base_rss_adapter - INFO - Batch save complete for Vogue. 30 entries saved.
+2025-11-05 10:08:55,931 - app.services.adapters_source.base_rss_adapter - INFO - Collection and saving to database complete for Vogue. Processed a total of 30 entries.
+2025-11-05 12:41:58,449 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for Business of Fashion
+2025-11-05 12:41:58,449 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed Business of Fashion from: https://www.businessoffashion.com/arc/outboundfeeds/rss/?outputType=xml
+2025-11-05 12:41:58,940 - app.services.adapters_source.base_rss_adapter - INFO - Validated 100 out of 100 entries successfully for Business of Fashion
+2025-11-05 12:41:58,991 - app.services.adapters_source.base_rss_adapter - INFO - Normalized 100 out of 100 entries for Business of Fashion
+2025-11-05 12:41:59,076 - app.services.adapters_source.base_rss_adapter - INFO - Batch save complete for Business of Fashion. 100 entries saved.
+2025-11-05 12:41:59,076 - app.services.adapters_source.base_rss_adapter - INFO - Collection and saving to database complete for Business of Fashion. Processed a total of 100 entries.
+2025-11-05 12:42:31,856 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for Business of Fashion
+2025-11-05 12:42:31,857 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed Business of Fashion from: https://www.businessoffashion.com/arc/outboundfeeds/rss/?outputType=xml
+2025-11-05 12:42:32,287 - app.services.adapters_source.base_rss_adapter - INFO - Validated 100 out of 100 entries successfully for Business of Fashion
+2025-11-05 12:42:32,339 - app.services.adapters_source.base_rss_adapter - INFO - Normalized 100 out of 100 entries for Business of Fashion
+2025-11-05 12:42:32,401 - app.services.adapters_source.base_rss_adapter - INFO - Batch save complete for Business of Fashion. 0 entries saved.
+2025-11-05 12:42:32,401 - app.services.adapters_source.base_rss_adapter - INFO - Collection and saving to database complete for Business of Fashion. Processed a total of 100 entries.
+2025-11-05 12:42:58,697 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for Business of Fashion
+2025-11-05 12:42:58,698 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed Business of Fashion from: https://www.businessoffashion.com/arc/outboundfeeds/rss/?outputType=xml
+2025-11-05 12:42:59,092 - app.services.adapters_source.base_rss_adapter - INFO - Validated 100 out of 100 entries successfully for Business of Fashion
+2025-11-05 12:42:59,142 - app.services.adapters_source.base_rss_adapter - INFO - Normalized 100 out of 100 entries for Business of Fashion
+2025-11-05 12:42:59,212 - app.services.adapters_source.base_rss_adapter - INFO - Batch save complete for Business of Fashion. 0 entries saved.
+2025-11-05 12:42:59,212 - app.services.adapters_source.base_rss_adapter - INFO - Collection and saving to database complete for Business of Fashion. Processed a total of 100 entries.
+2025-11-05 12:50:25,818 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for Women's Wear Daily
+2025-11-05 12:50:25,819 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed Women's Wear Daily from: http://wwd.com/feed
+2025-11-05 12:50:27,649 - app.services.adapters_source.base_rss_adapter - INFO - Validated 10 out of 10 entries successfully for Women's Wear Daily
+2025-11-05 12:50:27,658 - app.services.adapters_source.base_rss_adapter - INFO - Normalized 10 out of 10 entries for Women's Wear Daily
+2025-11-05 12:50:27,702 - app.services.adapters_source.base_rss_adapter - INFO - Batch save complete for Women's Wear Daily. 10 entries saved.
+2025-11-05 12:50:27,702 - app.services.adapters_source.base_rss_adapter - INFO - Collection and saving to database complete for Women's Wear Daily. Processed a total of 10 entries.
+2025-11-05 13:07:53,593 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for WWD
+2025-11-05 13:07:53,595 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed WWD from: https://wwd.com/custom-feed/fashion/
+2025-11-05 13:07:54,105 - app.services.adapters_source.base_rss_adapter - WARNING - No entries fetched for WWD
+2025-11-05 22:59:49,192 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for Vogue
+2025-11-05 22:59:49,194 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed Vogue from: https://www.vogue.com/feed/rss
+2025-11-05 22:59:49,586 - app.services.adapters_source.base_rss_adapter - INFO - Validated 30 out of 30 entries successfully for Vogue
+2025-11-05 22:59:49,603 - app.services.adapters_source.base_rss_adapter - INFO - Normalized 30 out of 30 entries for Vogue
+2025-11-05 22:59:49,715 - app.services.adapters_source.base_rss_adapter - INFO - Batch save complete for Vogue. 30 entries saved.
+2025-11-05 22:59:49,715 - app.services.adapters_source.base_rss_adapter - INFO - Collection and saving to database complete for Vogue. Processed a total of 30 entries.
+2025-11-05 23:00:11,317 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for Business of Fashion
+2025-11-05 23:00:11,317 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed Business of Fashion from: https://www.businessoffashion.com/arc/outboundfeeds/rss/?outputType=xml
+2025-11-05 23:00:12,252 - app.services.adapters_source.base_rss_adapter - INFO - Validated 100 out of 100 entries successfully for Business of Fashion
+2025-11-05 23:00:12,349 - app.services.adapters_source.base_rss_adapter - INFO - Normalized 100 out of 100 entries for Business of Fashion
+2025-11-05 23:00:12,407 - app.services.adapters_source.base_rss_adapter - INFO - Batch save complete for Business of Fashion. 22 entries saved.
+2025-11-05 23:00:12,407 - app.services.adapters_source.base_rss_adapter - INFO - Collection and saving to database complete for Business of Fashion. Processed a total of 100 entries.
+2025-11-06 10:58:29,470 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for Elle
+2025-11-06 10:58:29,472 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed Elle from: https://www.elle.com/rss/all.xml
+2025-11-06 10:58:30,117 - app.services.adapters_source.base_rss_adapter - INFO - Validated 50 out of 50 entries successfully for Elle
+2025-11-06 10:58:30,135 - app.services.adapters_source.base_rss_adapter - INFO - Normalized 50 out of 50 entries for Elle
+2025-11-06 10:58:30,208 - app.services.adapters_source.base_rss_adapter - INFO - Batch save complete for Elle. 50 entries saved.
+2025-11-06 10:58:30,208 - app.services.adapters_source.base_rss_adapter - INFO - Collection and saving to database complete for Elle. Processed a total of 50 entries.
+2025-11-06 10:58:42,933 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for Fashionista
+2025-11-06 10:58:42,933 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed Fashionista from: https://fashionista.com/.rss/excerpt/
+2025-11-06 10:58:43,496 - app.services.adapters_source.base_rss_adapter - INFO - Validated 50 out of 50 entries successfully for Fashionista
+2025-11-06 10:58:43,520 - app.services.adapters_source.base_rss_adapter - INFO - Normalized 50 out of 50 entries for Fashionista
+2025-11-06 10:58:43,582 - app.services.adapters_source.base_rss_adapter - INFO - Batch save complete for Fashionista. 50 entries saved.
+2025-11-06 10:58:43,582 - app.services.adapters_source.base_rss_adapter - INFO - Collection and saving to database complete for Fashionista. Processed a total of 50 entries.
+2025-11-06 10:59:00,696 - app.services.adapters_source.base_rss_adapter - INFO - Initializing RSS adapter for WWD
+2025-11-06 10:59:00,697 - app.services.adapters_source.base_rss_adapter - INFO - Starting collection for feed WWD from: https://wwd.com/custom-feed/recent-stories/
+2025-11-06 10:59:00,960 - app.services.adapters_source.base_rss_adapter - INFO - Validated 4 out of 4 entries successfully for WWD
+2025-11-06 10:59:00,962 - app.services.adapters_source.base_rss_adapter - INFO - Normalized 4 out of 4 entries for WWD
+2025-11-06 10:59:00,997 - app.services.adapters_source.base_rss_adapter - INFO - Batch save complete for WWD. 4 entries saved.
+2025-11-06 10:59:00,997 - app.services.adapters_source.base_rss_adapter - INFO - Collection and saving to database complete for WWD. Processed a total of 4 entries.
