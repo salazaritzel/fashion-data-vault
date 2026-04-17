@@ -177,13 +177,14 @@ class Base_RSS_Adapter:
 
         # Build the query prior to inserting it into the database
         # Use parameterized queries to prevent SQL injection attacks
+        # TO-DO: Change all single quotes to double quotes. It's better practice. Also added semicolon to return id.
         query = '''
             INSERT INTO aggregates_trend
                 (source_type, source_name, title, content, keywords,
                 link, published_at, collected_at, metadata)
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
             ON CONFLICT (source_name, link) DO NOTHING
-            RETURNING id
+            RETURNING id;
         '''
         
         saved_count = 0

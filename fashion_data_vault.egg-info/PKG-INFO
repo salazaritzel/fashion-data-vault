@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: fashion-data-vault
+Version: 0.0.1
+Summary: Fashion intelligence platform for trend analysis and prediction
+Author: Itzel Salazar
+Keywords: fashion,trends,prediction,data-analysis,nlp,intelligence
+Classifier: Private :: Do Not Upload
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: psycopg[binary]>=3.2
+Requires-Dist: feedparser>=6.0
+Requires-Dist: beautifulsoup4>=4.14
+Requires-Dist: lxml>=6.0
+Requires-Dist: pandas>=2.3
+Requires-Dist: spacy>=3.8
+Requires-Dist: python-dotenv>=1.1
+
+## Next.js App Router Course - Starter
+
+This is the starter template for the Next.js App Router Course. It contains the starting code for the dashboard application.
+
+For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
