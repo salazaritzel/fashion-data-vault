@@ -5,6 +5,6 @@ from app.services.processing.entity_extractor import EntityExtractor
 configure_logging()
 
 if __name__ == '__main__':
-    extractor = EntityExtractor(days = 1) # Running daily. We only want to analyze the articles collected in the past day.
+    extractor = EntityExtractor()
     extractor.daily_analysis()
 

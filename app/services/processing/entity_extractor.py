@@ -16,45 +16,15 @@ class EntityExtractor:
     """Extract fashion entities (seasons, collections, brands, materials, trends) from articles using spaCy's NLP."""
 
     # Initializing the python object, defining defaults.
-    def __init__(self, days: int = 1):
-        self.days = days
-        self.data_frame = self.load_articles(days)
+    def __init__(self):
         self.nlp = spacy.load("en_core_web_md")
         self.matcher = self.define_matcher()
-        self.entity_ruler = self.define_entity_ruler()
-
-    # =================== Loading Articles from Database ===================
-    def load_articles(self, days):
-        """Load articles from the database for the last n days."""
-        try:
-            interval_time = datetime.now(timezone.utc) - timedelta(days=days)
-           
-            query = """
-                SELECT id, source_name, title, content, published_at
-                FROM aggregates_trend
-                WHERE published_at > %s
-                ORDER BY published_at DESC
-            """
-            # TODO: LIMIT %s might be useful for preventing overloading
-
-            with get_connection() as conn:
-                data_frame = pd.read_sql(query, conn, params = (interval_time,))
-                
-            data_frame["full_text"] = (data_frame["title"] + " " + data_frame["content"].fillna(""))
-            
-            logger.info("Loaded %d article(s) from the last %d day(s)", len(data_frame), days)
-        
-            return data_frame
-        
-        except Exception as err:
-            logger.error("Failed to load articles for %d days: %s", days, err, exc_info = True)
-            raise
-        
+        self.entity_ruler = self.define_entity_ruler()    
     
-    # =================== Loading Articles by Date (Backfilling) ===================
-    # Where target date would be either today or November 1, 2025
-    def load_articles_by_date(self, target_date):
-        """One time job to back fill all our current saved data."""
+    # =================== Loading Articles by Date ===================
+    def load_articles(self, date):
+        """Load articles from the database for the last n days."""
+        
         try:
             query = """
                 SELECT id, source_name, title, content, published_at
@@ -62,18 +32,19 @@ class EntityExtractor:
                 WHERE published_at::date = %s
                 ORDER BY published_at DESC
             """
+            # TODO: LIMIT %s might be useful for preventing overloading
 
             with get_connection() as conn:
-                df = pd.read_sql(query, conn, params = (target_date,))
+                data_frame = pd.read_sql(query, conn, params = (date,))
 
-            df["full_text"] = (df["title"] + " " + df["content"].fillna(""))
+            data_frame["full_text"] = (data_frame["title"] + " " + data_frame["content"].fillna(""))
 
-            logger.info("Loaded %d article(s) for date: %s.", len(df), target_date)
+            logger.info("Loaded %d article(s) for date: %s.", len(data_frame), date)
             
-            return df
+            return data_frame
         
         except Exception as err:
-            logger.error("Error loading articles for date %s: %s", target_date, err, exc_info = True)
+            logger.error("Error loading articles for date %s: %s", date, err, exc_info = True)
             raise
 
     # =================== Define Matcher for Trend Detection ===================
@@ -483,7 +454,7 @@ class EntityExtractor:
     def backfill(self):
         try:
             start_date =  date(2025, 11, 1) # Starting from November 1st (anything prior is too scattered)
-            # start_date = datetime.now(timezone.utc).date() - timedelta(days = 3) # For testing, backfill the last 5 days
+            # start_date = datetime.now(timezone.utc).date() - timedelta(days = 1) # For testing, backfill the last 5 days
             current_date = start_date
             end_date = datetime.now(timezone.utc).date() # Backfill up to today (4/15/26)
 
@@ -494,7 +465,7 @@ class EntityExtractor:
             processed_dates = 0 # For debugging delete after
 
             while current_date <= end_date:
-                df = self.load_articles_by_date(current_date)
+                df = self.load_articles(current_date)
                 if len(df) > 0:
                     logger.info("Processing current date: %s with total number of articles: %d.", current_date, len(df))
         
@@ -515,11 +486,13 @@ class EntityExtractor:
 
     # =================== Daily Analysis ===================
     def daily_analysis(self):
-        """Run daily analysis: load articles, extract trends and entities, and save results to the database."""
+        """Run daily analysis: load articles, extract trends and entities, and save results to the database."""        
         try:
-            trend_counts = self.extract_trends()
-            season_counts, collection_counts, brand_counts, material_counts = self.extract_entities()
-            self.save_results_to_database(trend_counts, season_counts, collection_counts, brand_counts, material_counts)
+            today = datetime.now(timezone.utc).date()
+            data_frame = self.load_articles(today)
+            trend_counts = self.extract_trends(data_frame)
+            season_counts, collection_counts, brand_counts, material_counts = self.extract_entities(data_frame)
+            self.save_results_to_database(trend_counts, season_counts, collection_counts, brand_counts, material_counts, snapshot_date = today)
             logger.info("Daily analysis completed successfully.")
         except Exception as err:
             logger.error("Daily analysis failed: %s", err, exc_info = True)

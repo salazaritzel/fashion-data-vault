@@ -175,3 +175,9 @@ FROM public.trend_summary
 WHERE entity_type = 'material'
     AND entity_value = 'cotton'
     AND snapshot_date >= '2025-11-01';
+
+
+SELECT title, source_name, link, COUNT(*) as count
+FROM aggregates_trend
+WHERE title = 'at the cfda awards, recession beauty hacks get real'
+GROUP BY title, source_name, link;
