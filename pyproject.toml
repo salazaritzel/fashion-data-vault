@@ -30,4 +30,4 @@ classifiers = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["database", "app", "app.*"]
+include = ["backend*", "database*"]

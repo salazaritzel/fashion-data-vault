@@ -11,7 +11,6 @@ npm-debug.log*
 
 # TypeScript
 *.tsbuildinfo
-next-env.d.ts
 
 # Python
 venv/
@@ -21,3 +20,6 @@ logs/
 
 # Misc
 .DS_Store
+
+fashion_data_vault.egg-info/
+*.egg-info/
