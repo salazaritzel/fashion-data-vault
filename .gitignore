@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+.next/
+out/
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Python
+venv/
+__pycache__/
+*.pyc
+logs/
+
+# Misc
+.DS_Store
+
+fashion_data_vault.egg-info/
+*.egg-info/
