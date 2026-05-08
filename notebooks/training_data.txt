@@ -1,0 +1,328 @@
+Christian Dior
+Louis Vuitton
+Gucci
+Azzedine Alaïa
+Abercrombie
+Zara
+Mango
+H&M
+Giuseppe Zanotti
+Jean Paul Gaultier
+Steve Madden
+Christian Lacroix
+Ralph Lauren
+Yves Saint Laurent
+Hermès
+Christian Louboutin
+Loewe
+The Row
+Jacquemus
+Marc Jacobs
+Jill Sander
+Chanel
+Givenchy
+Bottega Veneta
+Valentino
+Zimmermann
+Paco Rabanne
+Thom Browne
+Schiaparelli
+North Face
+Versace
+Celia Kritharioti
+Miss Sohee
+Yohji Yamamoto
+Prada
+Miu Miu
+Salomon
+Puma
+Asics
+Calvin Klein
+Robert Wun
+Balmain
+Chloé
+Dsquared2
+Chrome Hearts
+Giorgio Armani
+Maison Margiela
+Moschino
+Adidas
+Nike
+New Balance
+Off-White
+Jimmy Choo
+Skims
+Thierry Mugler
+John Galliano
+Carolina Herrera
+Luar
+Alexander Wang
+Vera Wang
+Balenciaga
+Badgley Mischka
+Bulgari
+Stella McCartney
+Alexander McQueen
+Zuhair Murad
+Vetements
+Vivienne Westwood
+Khaite
+Michael Kors
+Zac Posen
+Elie Saab
+Toteme
+Brunello Cucinelli
+Salvatore Ferragamo
+DÔEN
+The Attico
+Casadei
+Manolo Blahnik
+Amina Muaddi
+Gianvito Rossi
+Victoria Beckham
+Herve Leger
+Christopher Esber
+Oscar de la Renta
+Burberry
+Ganni
+Celine
+MaxMara
+Levi's
+Tom Ford
+Isabel Marant 
+Fendi
+Cartier
+Van Cleef & Arpels
+Lanvin
+Roberto Cavalli
+Emilio Pucci
+Coach
+Helmut Lang
+Dolce & Gabbana
+
+Training data is only from publicly available data, that of which includes, magazine publications (only from open articles or up to the reading limit), reddit posts and comments, substack, threads.
+
+# Training Data (Source: Wikipedia, Vogue, BoF, WWD, Harper's Bazaar) (50)
+In January 2023, Sabato de Sarno was appointed creative director of Gucci[75] to "reestablish Gucci's edge" and "restore its brand equity", after the Bizzarri/Michele success had also eroded Gucci's luxury glow.
+In recent months, we’ve been noticing a shift toward cobalt blue. Our first inkling came over a year ago, when Balenciaga, Chloé, Valentino, and Schiaparelli all endorsed the vibrant shade on the spring 2025 runways.
+Celebrities are beginning to endorse cobalt with aplomb, too. Last night, Bella Hadid celebrated the premiere of Ryan Murphy’s The Beauty in a full Saint Laurent resort 2026 look: a color-blocked windbreaker in cobalt and gray and a coated cotton black paper bag skirt. 
+After Robbie and her stylist, Andrew Mukamal, all but reinvented the modern press tour with Barbie, it should come as no surprise that the duo had much in store for her Wuthering Heights promo. While they’ve tapped Chanel, Thom Browne, and Schiaparelli to create custom Brontëesque (or, perhaps more accurately, Brontë-adjacent) looks, they just pulled off their biggest surprise yet with an impressive archive pull.
+The Next Humans to Land on the Moon Will Wear This Oakley Space Visor
+For the 2026 Winter Games, Team Mongolia’s uniforms are once again proving to be among the most talked-about looks. Designed by Goyol Cashmere, the ceremonial outfits reinterpret traditional deel garments—the long, belted robes of Mongolia’s nomadic heritage—in a super chic contemporary cut. 
+Canada’s official Winter Olympic uniforms, designed by Canadian athleticwear favorite Lululemon, are anchored by the national symbol: an oversized red maple leaf.
+The late, great Thierry Mugler raised the benchmark when it comes to fantastical fashion, with the footwear he created being no exception. 
+Runway-documented finds from the early career of Comme des Garçons founder Rei Kawakubo are a rare find for buyers and collectors—on the third day of Paris Fashion Week, an over 500-piece lot caused a bidding war at the Piasa auction house.
+Founded as a saddlery and harness maker, Hermès has always focused on the horse, as illustrated by a quip attributed to Jean-Louis Dumas: "Our first customer is the horse. The second, the rider".
+In July 2016, complaints were made against Zara that they had been stealing designs from multiple independent designers for their products.
+In 2015, Aimé Leon Dore collaborated with Puma on an update of Puma's classic State sneaker.
+In 2024, the Humane Society of the United States campaigned for Max Mara to stop trafficking in the fur trade of foxes, mink, and raccoon dogs, stating "Max Mara has fallen behind their competitors—including Gucci, Versace, Armani, Prada and Valentino—that have already gone fur-free.
+Miu Miu was established in 1992 by Miuccia Prada. The name was conceived from Miuccia Prada's family nickname.[3] It was publicly launched in 1993, with a cowgirl-themed collection of fringed suede jackets and patchwork prairie skirts.
+Luxottica retails its products through stores that it owns, predominantly LensCrafters, Sunglass Hut, Pearle Vision, Target Optical, and Glasses.com. It also owns EyeMed, one of the largest vision health insurance providers.
+The NFL and Abercrombie's official fashion partnership will take center stage on Super Bowl weekend when the two sides come together for their first fashion show.
+Copenhagen Fashion Week’s 20th edition offered promise in pushing fashion’s sustainability agenda from within, defying the wider industry's pullback from the cause. But with fashion’s decarbonisation trajectory offtrack, Shein’s questionable climate targets, paired with labour abuse in Nike and Prada’s supply chains, there’s still a long way to go.
+After brands from Bode to Willy Chavarria saw smash success on the US’s biggest stage in 2025, more brands are looking to cash in by taking advantage of the Big Game’s enormous audience — one which is becoming younger and more female, thanks in part to celebrity WAGs like Taylor Swift and Olivia Culpo.
+Pieter Mulier has been named creative director of Versace, new owner Prada Group has confirmed.
+Prada Group has agreed to acquire Versace from Capri Holdings for €1.25 billion ($1.38 billion), after negotiating a discount of more than €200 million due to the impact of US president Donald Trump’s trade war.
+As luxury brands stumble, new entrants ranging from Alo Yoga to Nili Lotan to Old Navy are launching their first bag collections. Is there room in the market for all of them?
+Sézane leads the contemporary and accessible luxury segment in overall online brand performance in 2025, with earned content on social media signalling deep customer connection to the brand’s romantic French aesthetic. 
+Just one year earlier, metallics delivered some of the night’s most talked about fashion moments. Demi Moore made a striking appearance in a gold metallic Giorgio Armani gown rooted in classic glamour, while Angelina Jolie offered a darker, more dramatic take in a gothic metallic and sheer Alexander McQueen look. Zendaya also embraced the trend in a copper-tone Louis Vuitton design, highlighting how metallics can shift the mood through silhouette and styling.
+Two years ago, not long after she was named Bulgari’s first creative director of leather goods and accessories, Mary Katrantzou took the first of many deep dives into the Italian house’s archives.
+One of the pillar pieces in Carolyn Bessette-Kennedy's well-documented closet? Her classic denim. Bessette-Kennedy’s bootcut jeans became so famous that the costume department of the new Ryan Murphy series Love Story: John F. Kennedy Jr. & Carolyn Bessette went to great lengths to recreate them. “We fitted some Levi’s so that they looked exactly how they fit Carolyn,” star Sarah Pidgeon, who portrays CBK in the show, recently told Vogue.
+When we think about the heel trends and shoe designs of the formidable, stylish decade, most of us will go straight to that classic kitten heel. But there’s so many more options to choose from, in various silhouettes and vibes, ultra-minimalist and marvelously maximalist. Consider the ’90s heels from the big players: Chanel’s two-tone pumps, Miu Miu’s geometric, stacked loafers, and Prada’s Mary Jane. Right now, all those nostalgic styles are presenting themselves in a more contemporary way, and made all the more essential.
+The Mary Jane shoe can get a bad rep—sometimes, they can come across quite schoolgirlish. But style them right, and they’re endlessly feminine and chic. Just take the sharp-toed and wedge styles of Prada.
+Nostalgia really is the name of the game among shoe designers, but many are adding a more modern edge, too. Last season, Gucci reinvented its iconic red Ancora loafers from the ’90s—those that Helena Christensen wore for the fall 1995 fashion show, a pair with a square toe, golden equestrian buckle, chunky heel ,and distinctive red jewel tone.
+Square toe heels can’t be missed on this list: this infallible silhouettes is a sophisticated style with a masculine touch. Miu Miu, Prada, and Alexander McQueen have all produced their own versions.
+It is impossible to talk about the footwear that reigned in the ’90s without mentioning transparent heels. Loved and hated in equal parts, they were one of those pieces that defined a very particular strain of minimalism, in force until the mid-2000s. On his spring summer 1999 runway, Chado Ralph Rucci proposed a version with a wide heel, exposed toes, and black sole. Today, brands like Vetements and Maison Margiela put this sexy, sensual shoe back on the radar.
+January can be a confusing time. While half the population is shivering under their Uniqlo heattech layers on the way to work, a quick glance at Instagram seems to suggest that everyone and their dog is partying in St. Barts, or stomping around in moon boots at the après-ski.
+This week’s inspiration leans heavy on outerwear, for those who are braving the cold temperatures after a slew of snow storms. Kendall Jenner used a suede topper in chocolate brown as her focal point, layering it over a simple white T-shirt and indigo rinse denim while in New York City, and accessorizing with a chunky cashmere scarf and a leather tote from the Row.
+Although fellow Wuthering Heights star Jacob Elordi leans heavily into tailoring on the red carpet, his off-duty outfits err on the side of gorpcore-chic. He’s wearing an iconic Arc’teryx Beta jacket, paired effortlessly with flowy white pants, leather loafers, and a baseball cap for that street style-approved, high-low mix.
+Activewear items, like sneakers, windbreakers, and leggings have become a major part of today’s fashion ecosystem. Collaborations from the likes of Loewe x On Running and Wales Bonner x Adidas frequently send shoppers into a frenzy, while technical sport pieces from Lululemon and Salomon keep flying off the shelves. We’re investing our time and money into activewear—why should we save it for the gym?
+Bottega Veneta isn’t shy of a creative transition. During the pandemic, former creative director Daniel Lee unexpectedly exited the house in 2021, after turning the business around through his fresh approach to craft. Lee’s second-in-command, Matthieu Blazy, took the helm shortly after.
+130 years later, the Monogram is still that girl. First seen in 1896. Still everywhere in 2026. The Louis Vuitton Monogram turns 130 with a year-long celebration, spotlighting heritage icons, collector labels, and new editions. Loves it.
+Chris Black, known digitally as one-half of the podcast “How Long Gone”, has seen it all. In the foreground, he’s spent the last five and a half years interviewing everyone from  A-list to underground artists about their cultural tastes. In the background, he’s been steering brands like J. Crew, Thom Browne, New Balance, and more for the past decade as a creative consultant, advising them on how to surf the constantly turbulent world of “cool”.
+Rain and severe weather warnings couldn’t stop Cathrine Saks and Barbara Potts from putting on their SS24 show alongside the water in the suburb of Charlottenlund, just 20 minutes drive outside the city. The area, and the round cafe across the street Horden Rund (Around the World), which is the name of this season’s Saks Potts collection, is very special to the designers. Having met in kindergarten, they spent many of their childhood summers there and, as adults, they’ve gone on to travel all over the world together.
+In Milan, just four brands included non-straight-size models — the least we have seen since the start of the Vogue Business size inclusivity report. Last season, eight brands included non-straight-size models, including Marni, Fendi, Etro and Ferragamo.
+Under Armour Lifts Annual Forecasts as Turnaround Slows. CEO Kevin Plank has ramped up cost cuts, simplified product mix and rolled out new apparel and footwear styles since returning to the helm ⁠in April 2024.
+Widespread Inaction on Sustainability Eclipses Progress at Fashion’s Biggest Companies. Efforts to transform the fashion industry in line with global ambitions to curb climate change and establish more responsible business practices by 2030 have yet to gain sufficient momentum, The BoF Sustainability Index 2022 finds. No company scored more than 49 points out of 100, with Puma taking the top spot followed by Kering and Levi Strauss. The five weakest performers — URBN, Skechers, Fila Holdings, Anta and HLA Group — all scored fewer than 10 points.
+Nike Doubles Down on Recycled Fibres. The sportswear giant announced multi-year off take agreements with textile-to-textile recycling startups Syre and Loop this week, as it looks to reduce its future reliance on virgin polyester.
+Many of the gala's stylish attendees also repped their favorite Black-owned brands, with Danessa Myricks donning a fuchsia Sergio Hudson gown and 15 Percent Pledge founder Aurora James stepping out in vintage Stephen Burrows.
+For a cold-weather-savvy city, warm scarves weren't the only neck accessory top-of-mind. We spotted neck adornments of many varieties: Baum und Pferdgarten styled looks with ties, while Skall Studio tested out a floral choker; meanwhile, emerging label Studio Constance went with an oversized knit collar, complete with its own belt.
+Designed with retro sportswear in mind, Splits59 activewear looks just as good after a reformer class as it does during. 
+After its rebrand last summer, Outdoor Voices expanded its "movement universe," per the brand, by launching a separate collection tailored specifically to pilates and other low-impact workouts.
+When she sent models down the runway in oversized aprons for her spring/summer 2026 Miu Miu collection, she captured something more complex than the ’50s housewife nostalgia currently enjoying a resurgence thanks to the internet’s “tradwives.” This collection wasn’t about homemaking; it was about the significance of constantly performing it.
+This season, there was an Alaïa hooded number with a hooped waist like the rings of Saturn. An elegant Marc Jacobs dress that could enlarge my shoulders like a linebacker meets uptown madame. Or, maybe I could show nothing. Put me in Balenciaga’s Father Yod-hooded cloak à la Eyes Wide Shut and let me live my life, whether I’m bloated or not. Also, note: a little smart looseness at the waist by way of Prada never hurt anyone. Call it a chic funhouse mirror. 
+Matières Fécales is bringing an undeniably daring spirit to the hallowed halls of Paris Fashion Week.
+During high school, we wore flared versions (a.k.a. yoga pants) with North Face jackets and Ugg boots.
+
+# Training Data (Reddit Posts & Comments) (53)
+My favourite Met Gala Outfit ever is Rihanna as the Pope for the Heavenly Bodies theme in 2018. The dress is John Galliano for Margiela but I do wish it had a killer train.
+Heavenly Bodies was by far my favourite theme overall. There are so many good looks from that year, especially Gigi Hadid. I have to say that when I saw Tyla in the Balmain sand dress, I was obsessed. It contours to her body beautifully.
+Madonnas Versace sack robe was an absolute crime.
+Kate Moss & Calvin Klein were a match made in 90s heaven.
+Versace is known for high glam and overtly sexy styles. A lot of these look sloppy or like streetwear to me, which isn’t bad but also doesn’t seem like Versace.
+Law is such a student of fashion history that I think that's why his best work is with clients who can fit the sample size. For Zendaya's Dune press tour that got raves, he pulled archival looks from 1999 Givenchy and that amazing 1995 Mugler robot suit.
+The post of Versace’s 1995 S/S campaign featuring Madonna got me nostalgic for his immediately preceding 1994 F/W show. I was in the single digits of life but I still can’t undersell the importance this had on me (and just about every girl between 6-26 in the 1990s). The amount of metallics and minis currently in my closet is a testament to this show’s legacy.
+Some looks from Filipino fashion designer Ehrran Montoya's bridal collections.
+I’ve recently shopped at UNIQLO. I’ve only gone for their sales and every piece has been worth it.
+I adore the pink Celia Kritharioti dress. I would never have anything to wear it to but it's just stunning! The Miss Sohee gown is so elegant!
+Zendaya wearing Louis Vuitton at the Louis Vuitton Spring Summer 2026 show in Paris.
+Schiaparelli Haute Couture Spring Summer 2026 'The Agony and the Ecstasy' collection is a stunning collection. Dramatic and elegant and detailed. 
+Robert Wun's FW25 Haute Couture collection is true Haute Couture, and a sincere merging of fashion and art. Marvellous in every way!
+I just looked through the Elie Saab collection with all its soft edges and feminine glory.
+Maggie Rogers in Ralph Lauren resort 2026 at the brand's kickoff party for the Milano-Cortina Winter Olympic Games.
+That Gap Studio and Saint Laurent look are especially beautiful on Laura Harrier.
+Intrigued, obsessed, and slightly scared by the Louboutin ballet pointe heels. 
+Margot Robbie in Vivienne Westwood FW98 and Dior by John Galliano SS97 for “Wuthering Heights” promo in London. Styled by Andrew Mukamal.
+Matilda De Angelis in a custom-made dress by Massimo Cantini Parrini at the 2026 Milan Cortina Winter Olympics Opening Ceremonies.
+Margot Robbie in custom Dilara Findikoglu based on FW25 at the UK Premiere of “Wuthering Heights.” She is wearing a mourning bracelet once owned by Charlotte Brontë, woven from the intertwined hair of her deceased sisters, Emily and Anne Brontë. Styled by Andrew Mukamal.
+I don’t think I’ve ever seen anyone look comfortable in Dilara Findikoglu . The dresses always look like the wearer can’t move a single limb and just generally very poorly constructed and uncomfortable.
+Addison Rae in Alaïa's Spring 2026 runway styled by Dara Allen at 2026 Grammys. The dress is just… so unbelievable and not in a good way. My stomach hurts from looking at this dress.
+Sombr in Valentino Custom Suit envisioned by Alessandro Michele at 2026 Grammys. I already got downvoted from my previous comment on another post, but I really don’t give a fuck and nothing will change my mind. The suit itself looks too tight and too mediocre on him. The lace turtleneck designed top does not help with the matching jacket and pants, and it makes it look worse than what it is. I’m not going to say a word about the shoes.
+My take on Zuhair Murad's Spring/Summer 2026 Haute Couture ‘Chiaroscuro’ collection, I think the return of the gilded age will at least give us opulence to look at.
+Loving Vogue Taiwan's January 2026 issue photographed by Manbo Key. It's like a love letter to 1999.
+Lady Gaga’s third look in archival Givenchy by Alexander McQueen SS99 “The French Village” at the 68th Annual Grammy Awards in Los Angeles.
+Harry Styles in Dior Homme by Jonathan Anderson based on SS26 Womenswear at the 68th Annual Grammy Awards in Los Angeles 
+For Robert Wun's Spring Summer 2026 Couture, I think every look is always so well crafted and even when it's a reference, it still feels new and fresh. Visually distinct but not monotonous.
+These make my maximalist heart sing. Murad always has such beautiful beadwork.I would watch a full real-time video of someone doing all this embroidery.
+I like the hair and the Valentino dress, they’re very boho 70’s.
+Not to be dramatic but Robert Wun speaks to something deep in my soul.
+Anyone else hate that Zara is trying to play at being a prestige fashion house now?
+The show was awesome, the message was important and necessary, and I actually like his outfit but “custom Zara” along with their recent limited edition 50th anniversary collection in collaboration with some of the biggest names in fashion screams “just forget we’re actually a fast fashion company please and thank you” and I’m not loving that the fashion world is enabling this.
+Obsessed with the Valentino look , I love that she’s not afraid to take risks.
+Lady Gaga in custom Luar while performing a salsa rendition of ‘Die With A Smile’ during the Super Bowl Halftime Show.
+Cardi B in a Zimmermann top and a custom Candice Cuoco skirt fashioned from Zimmermann fabric with Tom Ford SS13 gladiator heels and nail design by Coca Michelle; Karol G in Ann Demeulemeester FW25 during Bad Bunny’s performance at the Super Bowl Halftime Show.
+Coco Jones wore two custom outfits by Karl Kani to perform "Lift Every Voice and Sing" at Super Bowl LX (February 8, 2026) the performance look paid homage to Whitney Houston's tracksuit at Super Bowl XXV in 1991 and blends streetwear, performance and Black history with the Pan-African flag colors.
+Team Mongolia will be wearing custom-made kits by Goyol Cashmere for their ceremonial and casual outfits at the Milano–Cortina 2026 Winter Olympic Games. "This collection aims to reintroduce the ancient Mongolian clothing culture to the contemporary world and share it on a global stage."
+VOGUEMan China February 2026 issue, featuring uniforms (by FILA and Anta) worn at the opening of Milan Winter Olympics 2026.
+In 2019, Katie Holmes went viral in a KHAITE cashmere co-ord. Founded in 2016 by Catherine Holstein, Khaite is high-quality, material-driven, foundational wardrobe pieces meant to be worn on a regular basis. Holstein won American Womenswear Designer of the Year at the 2022 CFDA Fashion Awards. 
+This look is truly iconic. It put Khaite on the map.
+The Olsen’s were still deep in their boho era and as a young college hippie/devout devourer of their style, I could not get over that sumptuous Balmain coat. To this day it is my dream to own something that luxurious. The drop-waist Chanel dress was a great understated complement while still capturing the same essence.
+Kate Winslet wearing Badgley Mischka at the 2005 Academy Awards.
+For the 2018 Met Gala theme: Heavenly Bodies: Fashion and the Catholic Imagination. Mary-Kate wore The Row, Ashley in vintage Paco Rabanne.
+For the 2018 Met Gala theme: China: Through the Looking Glass. Both in vintage John Galliano for Dior.
+Fan Bingbing’s 2010 Cannes gown by Laurence Hsu lives rent free in my brain. I even have the Barbie doll!
+The chinese actress Yang Zi wearing Robert Wun fw24 couture.
+Robert Wun for me makes art so divine that it seems to go beyond human comprehension, I think about this collection every day.
+Elegance, thy name is Eleanor Sung-Young. Everything from that Carolina Herrera opening ensemble to that ending Bulgari viper necklace is sheer perfection. Fangirling aside, Crazy Rich Asians – which opened today and is a delightful must-see – serves up some majorly discussion-worthy looks. Vanity Fair, Fashionista, and South China Morning Post have detailed what into the costuming of the film, but I'm curious as to what particular looks are giving us life (or, at the very least, inspo!)
+That Missoni dress was incredible! Loved how Awkwafina's character styled it, as well – don't we all need a giant gold cuff when the occasion arises?
+I have yet to watch Crazy Rich Asians, but I read that they were sponsored by a slew of designers including Dior, Elie Saab, Armani, and Stella McCartney. Guaranteed amazinggg. I HOPE I’ll see Asian designers because that would push the Asian-American representation agenda forward. I’d love to spot Alexander Wang, Self-Portrait, and Prabal Gurung pieces.
+Recreated the Marchesa gown from Crazy Rich Asians for a costume party awhile ago. Too much money spent on tulle, but here we are.
+I feel like fashion houses don't work with BTS to their full potential. V has started to show different things, which I love. Jhope KILLED the Louis Vuitton ad. Jungkook fit Calvin Klein like a glove. So I hope for more. Therefore, when they comeback, I hope for more fashion collaboration.
+I wouldn't be surprised if those suits were Paul Smith, but I can't say for sure. Regardless, if you're into the look, that's a good designer to browse.
+
+# Training Data (Substack) (50)
+At the 2026 Australian Open, Naomi Osaka’s walk-on attire extended far beyond performance necessity. Created in collaboration with Nike and couture designer Robert Wun, the ensemble drew inspiration from jellyfish imagery symbolising fluidity and motion, an idea Osaka linked to stories she was reading to her daughter. 
+I sit and read through my Vogue magazine as if it were the morning newspaper. Measuring the seasonal changes by using the newest fashion collections as an anchor. A new Moncler Grenoble ski jacket tells me it’s winter, and an explosion of flowers all around the Dior runway highlights the spring. Fashion undergoes changes and temporary moments of identity shifts, comparable to the mind processes of people; after all, fashion is an art created by human artists.
+Sex and the City was the ultimate portal connecting fashion with TV, while portraying fashion in a digestible and aspirational way. Carrie Bradshaw is still remembered for her stylish outfit choices, including the iconic Fendi Baguette and Manolo Blahnik shoe collection.
+Dario Vitale, the most recent creative director at Versace before ultimately being replaced by Pieter Mulier, barely had time to cement himself into the brand. Could it be that he didn’t align with the current state of mind in fashion? Does fashion work as a collective, and if you don’t fit in the bigger picture, then there is no room for you?
+Steve Madden is hiring a Design Assistant for Handbags
+Jonathan Anderson’s Dior Couture show offered fluid draping, sculptured silhouettes, and romantic floral elements.
+Copenhagen is now known as the fifth fashion week and has made waves in international fashion media with its bold street style, sustainability commitments, and breakout brands like Ganni.
+Ask any person on the street to name a fashion brand and there is a high chance they will respond ‘Chanel’ - a fashion giant whose reputation and double C logo is as recognisable as the golden arches. In the 116 years of operation, Chanel had only had 3 Creative Directors.
+Maison Margiela is often misread through the lens of concept alone, but its longevity is tied to this internal memory. Even as creative leadership changes, the house retains a technical vocabulary — approaches to construction, proportion, and deconstruction — that anchor experimentation. The clothes can shift in expression without losing structural coherence.
+The luxury handbag resale market is worth over $5.8 billion. In value, Louis Vuitton was the leading brand with 24% market share of the resale market ($1.4 billion in sales), Chanel the second with 20% market share ($1.2 billion in sales), and Hermès the third with 18% market share ($1 billion in sales).
+At a time when luxury is under scrutiny for feeling overpriced, out of touch, and overly corporate, Jacquemus just announced its first-ever brand ambassador: Simon Porte Jacquemus' 79-year-old grandmother. The post is part love letter, part satire of exclusivity clauses. It's a reminder that in luxury, the story is the product, often more than the clothes.
+Matthieu Blazy’s Chanel Spring 2026 Couture Debut feels like a Fashion Fairy Tale.
+Viv Chen, who pointed out that Sandy Liang used animation in her Gap drop, later wrote a great piece for Highsnobiety about the rise of illustration. While AI devours, the world of illustration is curiously getting bigger.
+90s’ Chanel was PEAK fashion you can't convince me otherwise
+Say hiya Barbie (hi Ken…just kidding, this is solely about Barbie!) to Coach Barbie. This collector shares her world through a brunette Barbie doll styled in Coach and thoughtfully chosen accessories.
+Schiaparelli FW24, Haute Couture - Craft is only interesting when it changes how something wears.
+The news is Gap Inc. hired a Chief Entertainment Officer to build their “Fashiontainment” platform, and I am fascinated!
+Congrats to team LUAR for dressing Lady Gaga at the Super Bowl!
+Lyst released its Q4 2025 report placing Saint Laurent as the top brand once again!
+Vogue Italia celebrates Valentino with a special cover for the February issue.
+I couldn’t help but also reflect on the items I once loved, and lost; not just to time, but to trends. Like the creepers I wore religiously during Rihanna’s influence (I also shaved the side of my head because of her). Or the Giuseppe Zanotti ‘Midas Touch’ heels that, as a teenager, were a mere fantasy of a broke college student.
+Coach has expanded its sustainability efforts with a new Repurposed Capsule collection as part of its ongoing (Re)Loved initiative, blending heritage design with circular fashion principles.
+Odd Muse has partnered with resale tech platform Birl to launch a take-back and resale programme, marking a significant step towards circularity for the brand. The initiative will allow customers to return pre-loved Odd Muse pieces directly back to the brand, where they’ll be assessed, refurbished where needed, and resold via a dedicated resale channel.
+Some of the stunning pieces from Yomas — the Puerto Rican knitwear brand worn by several backup dancers in Bad Bunny's Halftime Show.
+McQueen’s 1999 couture collection was inspired by Medieval Christianity, Martyrdom, and Dante’s Inferno.  In 1996, McQueen was appointed Creative Director of Givenchy at just 27, becoming the youngest designer ever to lead a major Paris couture house. He succeeded John Galliano, who had moved to Dior.
+petition to host more fashion shows at museums (and in san francisco) gq x thom browne fall 2026 
+Self-titled influencers getting paid ten times more for a video while not knowing what The Row is.
+When TikTok serves everyone the same Alo sweatsuit ($280, and the #3 most received Christmas gift for Gen Z TikTokers according to After School’s trend report) having something genuinely yours matters more than it has in years.
+Will any resale platforms test invite-only drops in 2026? They should. Link in Bio's Q4 report noted Margiela who sent fashion show invites via DM, or Ghia whose latest product teases aren't on Instagram, but in its founder’s Substack. 
+In September, when stylist Wisdom Kaye unboxed two back-to-back broken Miu Miu jackets from PR packages, the comments were full of people dissecting why luxury construction has tanked and where to find better-made alternatives. Vintage kept coming up. 
+Courtesy of the upcoming Carolyn Bessette-Kennedy series and the constant surge of archival fashion, vintage Yohji Yamamoto will continue to grow in popularity and have a major moment. The label hasn’t reached quite the stratospheric heights of say, vintage Margiela, in terms of pricing yet. CBK was a known collector of Yohji Yamamoto pieces.
+This is sort of an evergreen spring/summer trend but I see it going to an entirely new degree of total excess. Think: the heavy seashell-encrusted corset from Dilara Findikoglu’s fall 2025 collection (Cate Blanchett wore it) and the mesmerizing George Troch mussel-covered shell jacket (worn by Tyla).
+Also: one of my favorite recent celebrity style moments was Chappell Roan’s custom lace McQueen dress and matching floral headpiece she wore to headline Corona Capital CDMX in November 2025. I could see brands like Simone Rocha or even Chanel going all in with an extreme focus on the handmade, ethereal quality of intricate, handmade lace and spotlighting it for 2026. It has the handmade feel we all crave in these times.
+An armful of Cartier Love bracelets feels boring and more of a signaling of wealth status projection than a true ethos of personal style.
+J.Crew does an incredible job at building full experiences — thinking of the Nantucket, Aspen and Hamptons pop-ups. How long do those take to plan, from identifying the locations, to the exclusive merch?
+I tried on about 20 pairs of jeans (maybe more!) and ended up loving the Levi’s 517 and also liked a low-rise Levi’s Silver Tab, but ended up going with the 517. 
+Dream 2000’s Galliano dress added to TRR today. Forget everything I said about not needed anything for Valentine’s Day.
+A label we love from the early days of Veronica Beard, inside one of our original Dickey Jackets.
+I don’t have many bridal updates for you just yet, but I’m loving this DÔEN set for slow lounging at home and soaking in this very special time.
+Kith 2026 Olympics collection. Yes please, one of each.
+I’ve been in a Toteme kind of mood.
+The OG capsule wardrobe some may say. Calvin Klein understood this instinctively, and the same logic continues today in brands like The Row, Toteme, and Flore Flore (basics).
+Margiela just unlocked its digital archives with the “Maison Margiela/folders” project and is bringing them to China through a series of exhibitions. Fashion’s obsession with archives is here to stay.
+The show notes for Marc Jacobs Spring 2026, a tight 39 look lineup. The looks were sharp--strict even-- the show opened with dark suiting and ended with more ebullient color and dollish proportions. 
+Finally! The Paris Fashion Week FW26/27 schedule is live <3 Last year brought tremendous changes to the regular show timings - new slots for Dior, Chanel, Chloé, and more. It looks like some of them have stayed the same. Chanel will continue to hold an evening show, instead of the morning presentation I remember from previous years.
+Kering posted a €29 million net loss in 2025, down from a €1.02 billion profit in 2024, as CEO Luca de Meo accelerated restructuring efforts. Q4 revenue fell 9% reported (-3% comparable) to €3.91 billion, beating expectations and improving sequentially. Gucci showed early stabilization, with organic sales down 10%, slightly better than forecasts, while Bottega Veneta and the group’s smaller houses grew 3% and Saint Laurent was flat.
+Abercrombie, the first fashion partner of the NFL, dropped a showcase of looks last night in San Francisco ahead of the big game tomorrow. The models were made up of sports MVPs and their incredible partners fo form an elite roster.
+Through Leslie Zhang’s lens for W Magazine China, Louis Vuitton’s La Beauté collection by Pat McGrath becomes less about products and more about mood, art, and narrative. Because product photography doesn’t have to be boring: read my thoughts below.
+Schiaparelli Couture SS26 bird shoes play with fashion, expectations, and fantasy. More than an accessory, they’re a reminder that the house never stops telling stories.
+Prada Fall 26 Menswear find beauty in erosion: oversized cuffs, hybrid collars, stains, tailoring echoing decaying concrete buildings with metal grids exposed. And while we might not run to the store for a pre-stained shirt, Prada forces a rethink of what beauty means - and whether it still matters.
+
+
+# Training data from articles retrieved by FDV (50)
+Nike compensates migrant workers five years after labour controversy. Nike has agreed to substantial payouts to thousands of former garment workers at a thai supplier after years of pressure from labour rights campaigners and an independent investigation into alleged wage theft during the pandemic.
+Pacsun launches new social commerce app The Shoppable ps community hub will enable creators to post content, earn affiliate commissions and build a following, strengthening community engagement for the brand.
+Nike sold RTFKT in December the sale came roughly a year after the virtual sneaker and fashion brand ceased operations.
+Exclusive: Estée Lauder companies has put three brands up for sale Estée Lauder is strategically shopping a cluster of its brands including Too Faced, Smashbox and Dr. Jart in a package deal.
+The best of BoF 2025: A tough year for luxury high-end brands struggled to shake the gloom, with no sign of a rebound in view. Yet bright patches have emerged, with fresh energy from creative revamps, investor confidence in Kering’s new ceo and outperformance of labels like Hermes, Brunello Cucinelli and Prada.
+Lululemon founder nominates three new board candidates the athletic brand’s founder Chip Wilson is pushing for changes to the board before the company selects a new chief executive officer.
+Shein’s global ambitions survive french store uproar almost two months after its doors opened, efforts to resist the fast-fashion retailer in France are falling flat.
+Raf Simons Brand to Sell Archive at Dover Street Market Ginza. The sale in Tokyo comes three years after the Belgian designer shut down his label.
+Nike’s China conundrum deepens as turnaround stagnates in the Chinese market, the athletic brand is facing a sixth straight quarter of sales decline and mounting margin pain despite aggressive efforts to refresh product offerings.
+Coty sells remaining stake of Wella in $750 million deal with KKR. Coty said on friday it sold its remaining 25.8 percent stake in the hair care brand, while retaining rights to a share of any future sale or initial ⁠public offering proceeds.
+LVMH names Laura Burdese ceo of Bulgari. Long-time Bulgari CEO Babin will remain chairman of the roman jeweller and ceo of Bulgari hotels, and continue to oversee LVMH's watches unit.
+Must read: Stella Mccartney's falling sales fuel fears for its future, Birkenstock reports 20% revenue spike in Q4 these are the stories making headlines in fashion on Thursday. Sales at Stella Mccartney sank by more than a quarter last year, which added to fears it could run out of money by 2028. Pre-tax losses widened to £33.6 million ($45 million) in 2024 from £25 million ($33.5 million) the year ...continue reading
+Zara turns to ai to generate fashion imagery using real-life models the Inditex-owned brand’s ai experimentation follows swedish rival H&M, which created ai ⁠clones of models to use in marketing earlier this year.
+Amanda Batula is 'mentally preparing' herself to buy Saint Laurent loafers.
+Must read: Gordon Brothers invests in Rachel Zoe brand, model Bhavitha Mandava discusses her rising career. These are the stories making headlines in fashion on Wednesday. Boston-based investment firm Gordon Brothers has bought a majority stake in the Rachel Zoe brand. The investment will help Rachel Zoe with its licensing partnerships, product development and creative marketing. Zoe will remain ...continue reading
+Indie perfume brand Maison Crivelli expands Africa presence the fine french perfume house, known for its premium scents including hibiscus mahajád and tuberose astrale, is targeting dynamic countries like Nigeria and Ghana.
+Hermès heir of missing-shares fame sets up Paris investment firm Nicolas Puech, a fifth-generation descendant of the founder of Hermès International sca, established the company called Ferret last month.
+Chanel taps Aegon’s top hr executive for luxury company role. Elisabetta Caldera has been named global chief people and organisation officer starting next month.
+Amanda Seyfried channels quiet luxury in Giorgio Armani at ‘The Testament of Ann Lee’ premiere Seyfried's look was curated by stylist Elizabeth Stewart.
+20 - The shared obsessions of Azzedine Alaïa and Christian Dior in Paris, twin exhibitions reveal how two radically different working methods converged around craft, discipline and silhouette, writes Laurence Benaïm.
+Pieter Mulier to design Versace, Prada group confirms the outgoing Alaïa designer and long-time lieutenant of Prada co-creative director Raf Simons will be tasked with revitalising Prada group’s new acquisition, following the ouster of Dario Vitale in December.
+Michael Kors parent Capri raises annual revenue forecast Capri Holdings raised its annual revenue forecast, driven by strong performance from its Jimmy Choo brand, despite a dip in overall revenue and continued pressure on Michael Kors.
+Nike just turned Costco into a hypebeast playground nike’s release of its ‘Costco’ sb dunk low might actually be better than the shoes themselves.
+Prada cuts ties with over 200 suppliers after labour abuse audit since the audit began in 2020, the milanese fashion group found that more than a quarter of suppliers and subcontractors inspected had broken compliance rules.
+Weekly drop watch: Zimmermann Spring 2026, Margaux's new ballet flat style, one/size's debut skin-care launch and more for our weekly drop watch column, fashionista scours the market to curate the most noteworthy releases from our favorite fashion and beauty brands. keep scrolling for this week's highlights. Meet Margaux's seventh ballet flat style, the pascale, which "combines classic proportions with modern ...continue reading
+H&M profit beats expectations as concerns of slowing sales mount the swedish fast-fashion retailer exceeded profit forecasts for the third consecutive quarter.
+Amazon, LVMG and Chanel added to key saks bankruptcy committee the 10-member panel also includes a labour union representing Saks store workers, Zegna Group, Kering Americas and Brookfield Properties retail.
+
+# Training data from Threads public accounts
+Introducing our new collaboration. alexandrebirman x Agua by Agua Bendita. A collection that feels both effortless and elevated. Bridging two countries, two cultures, and two brands through a singular creative vision. 
+For his first foray into couture, Dior Creative Director Jonathan Anderson explored where nature meets artifice and the old welcomes the new. For Anderson, haute couture mirrors nature: copying it means learning from systems in constant motion, evolving, adapting, enduring.
+Dior Spring Summer 2026 Haute Couture. 18th-century portrait miniatures transformed into contemporary treasures as brooches.
+my first maison valentino show was this haute couture show haute couture week im so grateful and honoured I got to see this in person.. I’ve never had an experience like this at a show before, peaking through little windows to see such beautiful pieces - can you believe this is all handmade (stitching inspo lol I wish!!) wow I’ll be dreaming of this day forever thankyou so much 🥹💞💕
+Front row at today’s Elie Saab spring 2026 haute couture runway show — Heart Evangelista, Becca Bloom, Sabrina Elba, Tamara Kalinic  and more.
+I’ve always wanted to make a video like this and the Marc Jacobs just felt like the perfect opportunity to do sooo!!!
+Marc Jacobs is back with their 2026 Collection kicking off the busy NYFW week!
+Shalom Harlow for Vogue US, 1995. Photographed by Irving Penn, wearing Christian Lacroix Haute Couture. Penn (1917–2009) was one of fashion’s most famous photographers, known for keeping things simple and focused. Here, his calm style contrasts with Lacroix’s bold and baroque design.
+Pierre Cardin broke the rules of haute couture by being one of the first couture designers to launch ready-to-wear collections in the 1950s. At the time, haute couture was meant to be exclusive and custom-made for a tiny elite—but Cardin wanted high fashion for the future and for everyone. He was famous for his space-age designs—think bold geometric shapes, unisex silhouettes, and clothes that looked like they came straight out of a sci-fi movie.
+Robert Wun couture FW25, the garments reach another level of intensity & artistry when in motion.
+Did Ferrari just break the fashion code? With a new london flagship on the way, ferrari’s fashion vision feels more confident than ever. The new collection leans into british tailoring, quiet luxury, and performance driven details that feel refined and intentional. It feels like ferrari fully stepping into its fashion era.
+Dior Menswear Pre-Fall 26’ by Jonathan Anderson is here! Thoughts!?
+We just clocked every look on @allsfaironhulu show that we’ve been currently obsessed with! Love how they are using so many archival looks especially a ton of Jean Paul Gaultier.
+For Fall-Winter 2026 Men, Louis Vuitton gave a demonstration of texture, durability, and ingenuity, unveiling "TIMELESS TEXTILES," a transformation of light, heat, and movement into fabrics engineered to endure.
+Hermès’ Fall–Winter 2026–2027 bag lineup highlights the house’s signature balance of timeless craftsmanship and understated design, with refined handheld silhouettes reworked in glossy calfskin, supple Togo leather, and rich suede, alongside subtle, playful accents. Presented during Paris Fashion Week, the collection emphasizes enduring elegance over trends, reaffirming Hermès’ mastery of leather and proportion through pieces designed to be cherished long-term.
+Ralph Lauren’s Fall 2026 collection celebrates a woman who dresses with confidence and ease. Metallic touches, rich fabrics, and relaxed evening silhouettes come together in looks that feel polished but never overdone. The collection draws on classic Ralph Lauren codes, updated in a way that feels natural and current.
+Into the archives. As we prepare for the 45th Anniversary Michael Kors Collection Runway Show, we’re looking back at how it all began. In the first of this three-part series, we gave collage artist Rosanna Webster access to the very beginning of our archives, from 1981 to 1996.
+Bad Bunny has partnered with Adidas for several sneaker collaborations since 2021, and in 2026 he’s releasing his first official signature model called the Adidas BadBo 1.0 “Resilience,” marking the first time the global superstar and Latin artist has a true Adidas signature shoe distinct from previous collaborative drops.
+Goyard unveils its 2026 baguette-shaped bag collection — a sleek new take on the house’s heritage codes. Structured, refined and instantly recognizable, each piece blends meticulous craftsmanship with a contemporary silhouette.
+Obsessed with the Dsquared2 FW26 heels.The brand has long reimagined ice‑skate‑inspired footwear, the iconic “Skate Moss” silhouette fused lace-up skate elements with a stiletto heel, blending ski references with high-fashion craftsmanship.
+Audrey Hepburn wearing a haute couture dress designed by Yves Saint Laurent for Christian Dior’s 1959 collection, during his tenure as Dior’s head designer following Christian Dior’s death. Photographed by Richard Avedon for Harper’s Bazaar, the look reflects Saint Laurent’s early role in shaping the house’s transition into a more modern era of couture.
+Devon Aoki for Moschino Jeans Spring/Summer 2001 Photographed by Nathaniel Goldberg Before Jeremy Scott took over the Italian house in 2013, Moschino was helmed by designer Rossella Jardini. For the SS01 campaign of the brand’s diffusion line Moschino Jeans, Jardini chose Aoki as the face. The campaign featured Aoki appearing twice side-by-side in each image, embodying contrasting archetypes from schoolgirl to punk princess to beach babe.
+Naomi Campbell Wearing Jean Paul Gaultier Fall/ Winter 2004 Haute Couture that was worn by supermodel Yasmin Warsame. This we a significant collection since it was the inauguration of Gaultier’s first runway in his new headquarters in Paris.
+Kylie Jenner wore a vintage John Galliano dress from the designer’s Fall/Winter 1995 collection to her family’s 2025 Christmas Eve party, a piece older than she is.
+This era in Galliano’s career was just before his appointment at Dior (1996), when his own label was gaining attention for its dramatic, inventive runway work and avant-garde yet wearable designs.
+Kylie also mimicked the make up of the original runway look with dramatic, moody makeup and a braided updo with Hair By Igor Rosales
+Carolyn Bessette Kennedy at the Municipal Art Society gala in Yohji Yamamoto Fall/Winter 1998. At the time, Yohji Yamamoto was rarely worn on red carpets. Carolyn’s choice reflected her preference for conceptual designers and her ability to translate runway pieces into real life without spectacle. This look is often cited as one of her defining fashion moments.
+Lucy Liu for glamour us february 2000 wearing Louis Vuitton, Balmain, Prada and Chloé all from the spring/summer ready to wear 2000 collections.
+
+Python code to write into the CSV file:
+import csv
+with open('fashion_brands.csv', 'w', newline = '') as csvfile:
+    fashionrwriter = csv.reader(csvfile, delimeter = ' ', quotechar = '|', quoting = csv.QUOTE_MINIMAL)

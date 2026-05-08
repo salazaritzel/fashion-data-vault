@@ -11,12 +11,15 @@ npm-debug.log*
 
 # TypeScript
 *.tsbuildinfo
-next-env.d.ts
 
 # Python
 venv/
 __pycache__/
 *.pyc
+logs/
 
 # Misc
 .DS_Store
+
+fashion_data_vault.egg-info/
+*.egg-info/

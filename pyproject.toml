@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fashion-data-vault"
+version = "0.0.1"
+
+dependencies = [
+    "psycopg[binary]>=3.2",
+    "feedparser>=6.0",
+    "beautifulsoup4>=4.14",
+    "lxml>=6.0",
+    "pandas>=2.3",
+    "spacy>=3.8",
+    "python-dotenv>=1.1",
+]
+
+requires-python = ">=3.9"
+description = "Fashion intelligence platform for trend analysis and prediction"
+authors = [{ name = "Itzel Salazar" }]
+readme = "README.md"
+# license = { text = "MIT" }
+keywords = ["fashion", "trends", "prediction", "data-analysis", "nlp", "intelligence"]
+
+classifiers = [
+    "Private :: Do Not Upload",
+    "Programming Language :: Python :: 3"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["backend*", "database*"]
