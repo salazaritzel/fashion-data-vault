@@ -5,7 +5,7 @@ from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 from database.db_connection import get_connection
 from spacy.matcher import Matcher
-# from spacy.pipeline import EntityRuler
+from spacy.pipeline import EntityRuler
 from collections import Counter
 # from backend.shared.utils.logging_config import configure_logging
 from backend.services.nlp.vocabulary import materials, fashion_brands, fashion_nouns, fashion_adjectives
@@ -51,6 +51,10 @@ class EntityExtractor:
             logger.error("Error loading articles for date %s: %s", date, err, exc_info = True)
             raise
 
+    # TODO: This is something that really won't be fixed until we have real machine learning applied on here. 
+    # My top brand was Prada, The Devil Wears Prada 2 just released so ~50% of my extracted trends were of that, meaning they're polluted and I need to hardcode a solution. 
+    # Clean data is something that is very difficult to achieve. Right now I'm going to finish the frontend, then come back and hardcode the exclusion list.
+    
     # =================== Define Matcher for Trend Detection ===================
     def define_matcher(self):
         """Build a matcher based on Part-of-Speech patterns and fashion vocabulary for detecting trends."""
@@ -457,8 +461,8 @@ class EntityExtractor:
     # =================== Backfilling Data ===================
     def backfill(self):
         try:
-            # start_date =  date(2026, 4, 24) # Starting from November 1st (anything prior is too scattered)
-            start_date = datetime.now(local_timezone).date() - timedelta(days = 1) # For testing, backfill the last 5 days
+            start_date =  date(2026, 5, 7) # Starting from November 1st (anything prior is too scattered) (i reaaaally need to setup a cron job)
+            # start_date = datetime.now(local_timezone).date() - timedelta(days = 1) # For testing, backfill the last 5 days
             current_date = start_date
             end_date = datetime.now(local_timezone).date() # Backfill up to today (4/15/26)
 

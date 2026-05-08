@@ -1,3 +1,4 @@
+
 import {
   BanknotesIcon,
   ClockIcon,
@@ -6,6 +7,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { fetchCardData } from '@/app/lib/data';
 import { montserrat } from '@/app/ui/fonts';
+
 
 const iconMap = {
   collected: BanknotesIcon,

@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS trend_summary (id UUID PRIMARY KEY DEFAULT gen_random
 );
 
 -- Drop (delete) an existing table
-
+SELECT DISTINCT entity_type FROM trend_summary;
 DROP TABLE IF EXISTS trend_summary;
 
 -- To view aggregates_trend table

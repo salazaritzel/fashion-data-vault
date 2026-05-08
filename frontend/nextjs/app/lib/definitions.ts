@@ -2,6 +2,18 @@
 // It describes the shape of the data, and what data type each property should accept.
 // For simplicity of teaching, we're manually defining these types.
 // However, these types are generated automatically if you're using an ORM such as Prisma.
+
+// FDV TYPES
+export type Trend = {
+  entity: string;
+  total: number;
+};
+
+export type EntityListProperties = {
+  data: Trend[];
+}
+
+// These arent needed. Delete them. But once youre done.
 export type User = {
   id: string;
   name: string;
