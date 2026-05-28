@@ -11,7 +11,7 @@ export type Trend = {
 
 export type EntityListProperties = {
   data: Trend[];
-}
+};
 
 // These arent needed. Delete them. But once youre done.
 export type User = {

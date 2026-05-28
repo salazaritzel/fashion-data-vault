@@ -10,9 +10,9 @@ import clsx from 'clsx';
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
   { name: 'Trends', href: '/dashboard/invoices', icon: ArrowTrendingUpIcon, },
-  { name: 'Brands', href: '/dashboard/customers', icon: GlobeAltIcon },
-  { name: 'Seasons', href: '/dashboard/customers', icon: Squares2X2Icon },
-  { name: 'Materials', href: '/dashboard/customers', icon: SwatchIcon },
+  // { name: 'Brands', href: '/dashboard/customers', icon: GlobeAltIcon },
+  // { name: 'Seasons', href: '/dashboard/customers', icon: Squares2X2Icon },
+  // { name: 'Materials', href: '/dashboard/customers', icon: SwatchIcon },
   { name: 'Explore', href: '/dashboard/customers', icon: ViewfinderCircleIcon },
 ];
 

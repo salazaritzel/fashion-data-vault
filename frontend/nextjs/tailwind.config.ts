@@ -41,7 +41,9 @@ const config: Config = {
         beige: {
           300: '#D8D0C5',
           200: '#D2CAC7'
-        }
+        },
+      popover: 'oklch(1 0 0)',
+      popoverForeground: 'oklch(0.145 0 0)',
       },
     },
     keyframes: {

@@ -26,7 +26,7 @@ def health_check():
 # Create a path operation (route)
 @app.get("/api/trends")
 async def get_trends(
-    entity_type: Annotated[str, Query(max_length = 50)] = "trend", 
+    entity_type: Annotated[str, Query(max_length = 50)] = "trends", 
     time_window: Annotated[int, Query(ge = 1, le = 3653)] = 30
 ):
     query = """
