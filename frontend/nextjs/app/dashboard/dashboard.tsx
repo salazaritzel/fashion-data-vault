@@ -117,6 +117,3 @@ return (
     </>
   );
 }
-
-
-// i need the whitespace on the right of the total 

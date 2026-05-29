@@ -23,3 +23,5 @@ logs/
 
 fashion_data_vault.egg-info/
 *.egg-info/
+
+*.dump
