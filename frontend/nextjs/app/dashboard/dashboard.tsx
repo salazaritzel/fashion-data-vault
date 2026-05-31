@@ -111,7 +111,7 @@ return (
     </div>
 
     {/* Disclaimer for Data Display */}
-    <div className="p-2 text-gray-500 italic text-sm">
+    <div className="p-2 text-gray-400 italic text-sm">
       Disclaimer: Bar width reflects relative mention frequency within the selected time window, not total coverage.
     </div>
     </>
