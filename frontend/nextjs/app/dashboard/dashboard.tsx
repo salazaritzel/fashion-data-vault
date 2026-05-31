@@ -11,7 +11,7 @@ import TrendBar from '@/app/ui/trendbar';
 const FASTAPI_URL = process.env.NEXT_PUBLIC_FASTAPI_URL;
 
 export function DisplayData() {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true); // Manages the loading state of the data fetch.
   const [error, setError] = useState<Error | null>(null);
   const [entityType, setEntityType] = useState<string>('trend'); // Determines which entity type to fetch
   const [timeWindow, setTimeWindow] = useState<number>(30); // Determines the time window for the data fetch
