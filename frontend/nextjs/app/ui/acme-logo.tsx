@@ -1,4 +1,3 @@
-import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import { pinyon_script } from '@/app/ui/fonts';
 // import { lusitana } from '@/app/ui/fonts';
 // Tutorial shows lusitana, I used pinyon_script.
