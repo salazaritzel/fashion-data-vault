@@ -9,6 +9,8 @@ app = FastAPI()
 origins = [
     # Add vercel frontend url here when deployed
     "http://localhost:3000",
+    "https://fashion-data-vault.vercel.app",
+    "https://www.fashiondatavault.com"
 ]
 
 app.add_middleware(
