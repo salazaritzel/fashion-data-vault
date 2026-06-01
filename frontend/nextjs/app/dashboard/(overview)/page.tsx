@@ -1,3 +1,13 @@
+import { DisplayData } from '@/app/dashboard/dashboard';
+
+export default async function Page() {
+  return (
+    <main>
+        <DisplayData />
+    </main>
+  );
+}
+
 // import { Card } from '@/app/ui/dashboard/cards';
 // import CardWrapper from '@/app/ui/dashboard/cards';
 // import RevenueChart from '@/app/ui/dashboard/revenue-chart';

@@ -3,7 +3,7 @@
 // The goal of this file is to fetch the data based on user selection and pass it for display. useState holds your current selection, useEffect triggers a fetch when that selection changes.
 
 import { useState, useEffect } from 'react';
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigcleager, SelectValue } from "@/components/ui/select"
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Field, FieldLabel } from "@/components/ui/field"
 import { Trend } from '../lib/definitions';
 import TrendBar from '@/app/ui/trendbar';
