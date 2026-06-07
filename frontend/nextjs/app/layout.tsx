@@ -1,10 +1,8 @@
+import Header from '@/app/header';
 import '@/app/ui/global.css';
-import { montserrat } from '@/app/ui/fonts';
+import { montserrat, pinyon_script, atkinson_hyperlegible_mono } from '@/app/ui/fonts';
 import { Metadata } from 'next';
-import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
-
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 // Metadata details, for SEO purposes
 export const metadata: Metadata = {
@@ -22,8 +20,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body className={`${montserrat.className} antialiased`}>{children}</body>
+      <html lang = "en" className = {cn( 
+          montserrat.variable, pinyon_script.variable, atkinson_hyperlegible_mono.variable, "font-sans"
+      )}
+      >
+      <body>
+        {/* <Header /> */}
+        <main>
+          {children}
+        </main>
+      </body>
     </html>
   );
 }

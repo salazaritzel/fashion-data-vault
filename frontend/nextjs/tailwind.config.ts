@@ -8,10 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-sans)'],
+        display: ['var(--font-display)'],
+        mono: ['var(--font-mono)'],
+      },
       gridTemplateColumns: {
         '13': 'repeat(13, minmax(0, 1fr))',
       },
       colors: {
+        ink: '#1d1d1f', // accessible black alternative
+        paper: '#f8f7f5', // accessible white alternative
         blue: {
           400: '#2589FE',
           500: '#0070F3',
