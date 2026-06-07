@@ -15,7 +15,7 @@ export default function Page() {
         {/* Full BleedBackground Image */}
         <Image 
           alt = "Runway image displaying holographic charts."
-          src = "/fdv-hero.png"
+          src = "/fdv-hero.jpg"
           quality = {100}
           fill
           style = {{
