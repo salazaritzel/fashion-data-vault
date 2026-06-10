@@ -1,4 +1,5 @@
 // Loading animation
+// This is what gives it that loading shimmer effect. I love it. Looks professional.
 const shimmer =
   'before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent';
 
