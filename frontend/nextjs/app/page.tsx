@@ -1,6 +1,7 @@
 import Hero from './ui/home/hero';
 import Methodology  from './ui/home/methodology';
 import Headlines from './ui/home/news';
+import PageFooter from './ui/footer';
 
 export default function Page() {
   return (
@@ -21,6 +22,8 @@ export default function Page() {
           </div>
         <Methodology />
         <Headlines />
+        <hr className = "border-t border-gray-200 mx-6" />
+        <PageFooter />
       </div>
     </main>
   );
