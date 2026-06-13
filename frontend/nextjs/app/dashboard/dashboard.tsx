@@ -57,10 +57,10 @@ export function DisplayData() {
 return (
   <>
     {/* Dropdown Menus for Data Display */}
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 p-4 mb-4">
+    <div className = "grid grid-cols-[auto_auto] gap-4 mb-6 justify-start">
       
       {/* Dropdown menu for entity type */}
-      <Field className="w-full max-w-48">
+      <Field className = "w-auto min-w-36">
         <FieldLabel>Entity Type</FieldLabel>   
         <Select value = {entityType} onValueChange={(value) => {
           setEntityType(value)
@@ -82,7 +82,7 @@ return (
       </Field>
 
       {/* Dropdown menu for time window */}
-      <Field className="w-full max-w-48">
+      <Field className="w-auto min-w-36">
         <FieldLabel>Time Window</FieldLabel>
         <Select value = {String(timeWindow)} onValueChange={(value) => {
           setTimeWindow(Number(value))
@@ -92,11 +92,11 @@ return (
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectItem value="30">30 days</SelectItem>
-              <SelectItem value="60">60 days</SelectItem>
-              <SelectItem value="90">90 days</SelectItem>
-              <SelectItem value="180">180 days</SelectItem>
-              <SelectItem value="365">365 days</SelectItem>
+              <SelectItem value = "30">30 days</SelectItem>
+              <SelectItem value = "60">60 days</SelectItem>
+              <SelectItem value = "90">90 days</SelectItem>
+              <SelectItem value = "180">180 days</SelectItem>
+              <SelectItem value = "365">365 days</SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>

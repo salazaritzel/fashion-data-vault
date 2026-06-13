@@ -1,19 +1,18 @@
 'use client';
 
-import { UserGroupIcon, SwatchIcon, ViewfinderCircleIcon, HomeIcon, ArrowTrendingUpIcon, Squares2X2Icon, GlobeAltIcon} from '@heroicons/react/24/outline';
+import { ViewfinderCircleIcon, HomeIcon, ArrowTrendingUpIcon, Squares2X2Icon, GlobeAltIcon} from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import Header from '@/app/ui/header';
 
-// Map of links to display in the side navigation.
-// Depending on the size of the application, this would be stored in a database.
 const links = [ 
-  // Need to change these routes.
-  { name: 'Home', href: '/dashboard', icon: HomeIcon },
-  { name: 'Trends', href: '/dashboard', icon: ArrowTrendingUpIcon, },
-  // { name: 'Brands', href: '/dashboard/customers', icon: GlobeAltIcon },
-  // { name: 'Seasons', href: '/dashboard/customers', icon: Squares2X2Icon },
-  // { name: 'Materials', href: '/dashboard/customers', icon: SwatchIcon },
+  { name: 'Home', href: '/', icon: HomeIcon },
+  { name: 'Dashboard', href: '/dashboard', icon: ArrowTrendingUpIcon, },
+  { name: 'In the News', href: '/dashboard/customers', icon: GlobeAltIcon },
+  { name: 'Companies to Watch', href: '/dashboard/customers', icon: Squares2X2Icon },
+  { name: 'Reading Room', href: '/dashboard/customers', icon: GlobeAltIcon },
+  { name: 'Substack', href: '/dashboard/customers', icon: GlobeAltIcon },
   { name: 'Explore', href: '/dashboard', icon: ViewfinderCircleIcon },
 ];
 
@@ -24,7 +23,6 @@ export default function NavLinks() {
       {links.map((link) => {
         const LinkIcon = link.icon;
         return (
-          // replaced the <a> tag with <Link>
           <Link 
             key = {link.name}
             href = {link.href}
@@ -32,8 +30,8 @@ export default function NavLinks() {
             )}          
           
           >
-            <LinkIcon className="w-6" />
-              <p className="hidden md:block">{link.name}</p>
+            <LinkIcon className = "w-6" />
+              <p className = "hidden md:block">{link.name}</p>
             </Link>
         );
       })}

@@ -6,7 +6,6 @@ export const montserrat  = Montserrat({
 });
 export const atkinson_hyperlegible_mono = Atkinson_Hyperlegible_Mono({ 
     subsets: ['latin'],
-    weight: '400',
     variable: '--font-mono',
 });
 export const pinyon_script  = Pinyon_Script({

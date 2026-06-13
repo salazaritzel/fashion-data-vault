@@ -1,4 +1,5 @@
-import Header from '@/app/header';
+import Header from '@/app/ui/header';
+import PageFooter from '@/app/ui/footer';
 import '@/app/ui/global.css';
 import { montserrat, pinyon_script, atkinson_hyperlegible_mono } from '@/app/ui/fonts';
 import { Metadata } from 'next';
@@ -29,7 +30,10 @@ export default function RootLayout({
         <main>
           {children}
         </main>
+        <hr className = "border-t border-gray-200 mx-6" />
+        <PageFooter />
       </body>
+
     </html>
   );
 }
