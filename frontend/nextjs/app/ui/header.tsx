@@ -3,9 +3,8 @@ import Link from 'next/link';
 
 export default function Header() {
     return (
-        // stickky until i have black background transition from white to black text
-        <header className="sticky top-0 z-50 px-8 py-8 e"> {/* sticky unsure */}
-            <Link href="/">
+        <header className = "sticky top-0 z-50 px-10 py-8 bg-paper">
+            <Link href = "/">
                 <FDVLogo />
             </Link>
         </header>

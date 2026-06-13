@@ -1,8 +1,7 @@
 import Hero from './ui/home/hero';
-import  Methodology  from './ui/home/methodology';
+import Methodology  from './ui/home/methodology';
+import Headlines from './ui/home/news';
 
-// TODO: The hero image due to the cards we have overflowing white space on the sides. We need to encapsulate that. Lets work on methodology first.
-// another issue is that somewehre probably my global.css file is preventing header values to actually be their correct size.
 export default function Page() {
   return (
     <main>
@@ -15,13 +14,13 @@ export default function Page() {
               What is FDV?
             </h2>   
             <p className = "font-mono text-ink">
-              Fashion Data Vault is an open fashion intelligence platform built from a genuine obsession with fashion and a frustration with how inaccessible, 
-              scattered, and siloed the industry's data is. From AI and sustainability to materials, culture, and emerging technologies, FDV aims to transform 
+              Fashion Data Vault is an open fashion intelligence platform built from a genuine obsession with fashion and a realization of how inaccessible, 
+              scattered, and siloed the industry's data is. From supply chains and sustainability, to materials, culture, AI, and emerging technologies FDV aims to transform 
               that noise into structured knowledge for researchers, builders, industry professionals, and anyone curious about the intersection of fashion and technology.
             </p>
           </div>
         <Methodology />
-
+        <Headlines />
       </div>
     </main>
   );
