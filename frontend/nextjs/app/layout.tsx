@@ -29,9 +29,7 @@ export default function RootLayout({
         {/* <Header /> */}
         <main>
           {children}
-        </main>
-        <hr className = "border-t border-gray-200 mx-6" />
-        <PageFooter />
+        </main>        
       </body>
 
     </html>

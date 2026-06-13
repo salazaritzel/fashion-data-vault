@@ -9,11 +9,16 @@ export default function PageFooter() {
         { label: "Instagram", icon: "instagram",  href: "https://instagram.com/fashiondatavault/" },
       ];
 
+    const currentYear = new Date().getFullYear();
+
     return (
         <footer className = "bg-neutral text-neutral-content px-10 py-10 md:px-20">
             <div className = "flex flex-row md:flex-row items-center justify-between gap-4">
                 {/* Copyright Text */}
-                <p className="font-mono text-ink text-xs sm:text-sm md:text-base">© {new Date().getFullYear()} - Fashion Data Vault</p>
+                <p className="font-mono text-ink text-sm">
+                    <span className = "sm:hidden">© {currentYear} FDV</span>
+                    <span className = "hidden sm:inline">© {currentYear} - Fashion Data Vault</span>
+                </p>
                 
                 {/* Contact Links */}
                 <nav className = "flex gap-4">
