@@ -17,7 +17,7 @@ export default function PageFooter() {
                 {/* Copyright Text */}
                 <p className="font-mono text-ink text-sm">
                     <span className = "sm:hidden">© {currentYear} FDV</span>
-                    <span className = "hidden sm:inline">© {currentYear} - Fashion Data Vault</span>
+                    <span className = "hidden sm:inline">© {currentYear} Fashion Data Vault</span>
                 </p>
                 
                 {/* Contact Links */}

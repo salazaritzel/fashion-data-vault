@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Header() {
     return (
-        <header className = "sticky top-0 z-50 px-10 py-8 bg-paper">
+        <header className = "sticky top-0 z-50 px-4 sm:px-10 py-8 bg-paper">
             <Link href = "/">
                 <FDVLogo />
             </Link>

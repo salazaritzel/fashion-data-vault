@@ -20,14 +20,14 @@ export default function Hero() {
           preload
         />
         
-        <div className = "relative z-10 flex flex-col h-full px-10 py-8">     
+        <div className = "relative z-10 flex flex-col h-full px-4 sm:px-10 py-8">    
           {/* Fashion Data Vault logo */}
           <Link href = "/">
             <FDVLogo textColor = "text-paper" />
           </Link>
 
           {/* Hero text overlay */}
-          <div className = "flex flex-col gap-6 mt-16 md:w-1/2">
+          <div className = "flex flex-col gap-6 mt-16 md:w-1/2 pl-2 sm:pl-0">
             <div className = "font-mono flex flex-col gap-1 text-2xl md:text-3xl lg:text-5xl text-paper">    
               <span>Fashion Intelligence.</span>
               <span>Powered by Data.</span>

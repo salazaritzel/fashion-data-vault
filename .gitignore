@@ -21,7 +21,9 @@ logs/
 # Misc
 .DS_Store
 
-fashion_data_vault.egg-info/
 *.egg-info/
 
 *.dump
+
+.vscode/
+.idea/
