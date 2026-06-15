@@ -1,6 +1,8 @@
 import Hero from './ui/home/hero';
 import Methodology  from './ui/home/methodology';
 import Headlines from './ui/home/news';
+import ReadingRoom from './ui/home/reading-room';
+import Substack from './ui/home/substack-preview';
 import PageFooter from './ui/footer';
 
 export default function Page() {
@@ -22,6 +24,8 @@ export default function Page() {
           </div>
         <Methodology />
         <Headlines />
+        <ReadingRoom />
+        <Substack />
         <hr className = "border-t border-gray-200 mx-6" />
         <PageFooter />
       </div>

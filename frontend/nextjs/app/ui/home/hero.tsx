@@ -27,7 +27,7 @@ export default function Hero() {
           </Link>
 
           {/* Hero text overlay */}
-          <div className = "flex flex-col gap-6 mt-16 md:w-1/2 pl-2 sm:pl-0">
+          <div className = "flex flex-col gap-6 mt-16 md:w-1/2 pl-4 sm:pl-0">
             <div className = "font-mono flex flex-col gap-1 text-2xl md:text-3xl lg:text-5xl text-paper">    
               <span>Fashion Intelligence.</span>
               <span>Powered by Data.</span>

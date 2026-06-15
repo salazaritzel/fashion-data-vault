@@ -6,7 +6,7 @@ export default function PageFooter() {
         { label: "GitHub", icon: "github", href: "https://github.com/salazaritzel" },
         { label: "LinkedIn", icon: "linkedin", href: "https://linkedin.com/in/itzel-salazar" },
         { label: "Substack", icon: "substack", href: "https://substack.com/@fashiondatavault" },
-        { label: "Instagram", icon: "instagram",  href: "https://instagram.com/fashiondatavault/" },
+        { label: "Instagram", icon: "instagram",  href: "https://instagram.com/fashiondatavault1/" },
       ];
 
     const currentYear = new Date().getFullYear();
