@@ -17,7 +17,7 @@ export default function Page() {
               What is FDV?
             </h2>   
             <p className = "font-mono text-ink">
-              Fashion Data Vault is an open fashion intelligence platform built from a genuine obsession with fashion and a realization of how inaccessible, 
+              Fashion Data Vault is a fashion intelligence platform built from a genuine obsession with fashion and a realization of how inaccessible, 
               scattered, and siloed the industry's data is. From AI and materials to supply chains and emerging technologies, FDV transforms
               that noise into structured knowledge for researchers, builders, industry professionals, and anyone curious about the intersection of fashion and technology.
             </p>
