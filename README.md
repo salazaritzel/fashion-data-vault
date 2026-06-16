@@ -21,7 +21,7 @@ Deployment: Railway, Vercel
 ![Screenshot of FDV's data architecture diagram](assets/data_architecture.png)
 
 ## Technical Decisions
-FDV is being developed in iterations, with each phase expanding the type of data sources that it ingests. Data collection follows an adapter based architecture to simplify the addition of new data sources as it progresses. In this version, FDV relies primarily on spaCy for NLP based trend extraction. However, spaCy's pretrained models (en_core_web_sm and en_core_web_md) proved limiting in terms of their fashion specific knowledge. As a result, a custom pipeline using manually curated domain specific datasets, rule based entity extraction, and pattern matching through spaCy's Matcher and Entity Ruler components were used. Without custom machine learning models or custom NER, this approach cannot achieve 100% accuracy. However, it can provide useful insights into emerging trends.
+FDV is being developed in iterations, with each phase expanding the type of data sources that it ingests. Data collection follows an adapter based architecture to simplify the addition of new data sources as it progresses. In this version, FDV relies primarily on spaCy for NLP based trend extraction. However, spaCy's pretrained models (en_core_web_sm and en_core_web_md) proved limiting in terms of their fashion specific knowledge. As a result, a custom pipeline was built using manually curated datasets, rule based entity extraction, and spaCy's Matcher and Entity Ruler components. Without custom machine learning models or custom NER, this approach cannot achieve 100% accuracy. It can, however, provide meaningful insights into emerging trends.
 
 ## Roadmap
 Phase 1 _(Current)_
