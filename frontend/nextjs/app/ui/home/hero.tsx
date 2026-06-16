@@ -10,7 +10,7 @@ export default function Hero() {
         {/* Background image */}
         <Image 
           alt = "Runway image displaying holographic charts."
-          src = "/fdv-hero.jpg"
+          src = "/hero-img.jpg"
           quality = {75}
           fill
           style = {{
