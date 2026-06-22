@@ -20,8 +20,8 @@ export default function Methodology() {
               </p>
               <div className = "relative aspect-[3/4] rounded-md overflow-hidden">
                 <Image 
-                  alt = "Stack of magazines."
-                  src = "/fashion/magazines.jpg"
+                  alt = "Open magazine with model wearing a silver dress posing."
+                  src = "/fashion/rss.jpg"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -84,8 +84,8 @@ export default function Methodology() {
               </p>
               <div className="relative aspect-[3/4] rounded-md overflow-hidden">
                 <Image 
-                  alt = "A stylish man and a woman walking."
-                  src = "/fashion/trends.jpg"
+                  alt = "Stylish young woman posing dramatically in black outfit, wearing oversized sunglasses, showcasing a blend of fashion and confidence against a dark monochrome background."
+                  src = "/fashion/trends.jpeg"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -110,8 +110,8 @@ export default function Methodology() {
               {/* The rss feed needs to change*/}
               <div className = "relative w-40 h-52 rounded-md overflow-hidden shrink-0">
                 <Image
-                  alt = "Stack of magazines."
-                  src = "/fashion/magazines.jpg"
+                  alt = "Open magazine with model wearing a silver dress posing."
+                  src = "/fashion/rss.jpg"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -122,8 +122,6 @@ export default function Methodology() {
               </div>
             </div>
             
-            {/* <div className="flex-1 h-px bg-blue-300" /> Connector line */}
-
             {/* Step 2 - Database */}
             <div className = "-mt-16 self-end">
               <p className = "font-mono text-ink text-end">
@@ -162,8 +160,6 @@ export default function Methodology() {
               </div>
             </div>
 
-            {/* <div className="flex-1 h-px bg-blue-300" /> Connector line */}
-
             {/* Step 4 - Trend output */}
             <div className = "-mt-16 self-end">
                 <p className = "font-mono text-ink text-end">
@@ -171,8 +167,8 @@ export default function Methodology() {
                 </p>
                 <div className = "relative w-40 h-52 rounded-md overflow-hidden shrink-0">
                     <Image 
-                    alt = "A stylish man and a woman walking."
-                    src = "/fashion/trends.jpg"
+                    alt = "Stylish young woman posing dramatically in black outfit, wearing oversized sunglasses, showcasing a blend of fashion and confidence against a dark monochrome background."
+                    src = "/fashion/trends.jpeg"
                     fill
                     style = {{
                         objectFit: 'cover'
