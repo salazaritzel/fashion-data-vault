@@ -1,5 +1,6 @@
 import Hero from './ui/home/hero';
 import Methodology  from './ui/home/methodology';
+import CompaniesToWatch  from './ui/home/companies-to-watch';
 import Headlines from './ui/home/news';
 import ReadingRoom from './ui/home/reading-room';
 import Substack from './ui/home/substack-preview';
@@ -23,6 +24,7 @@ export default function Page() {
             </p>
           </div>
         <Methodology />
+        <CompaniesToWatch />
         <Headlines />
         <ReadingRoom />
         <Substack />

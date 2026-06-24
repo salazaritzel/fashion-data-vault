@@ -21,7 +21,7 @@ export default function Methodology() {
               <div className = "relative aspect-[3/4] rounded-md overflow-hidden">
                 <Image 
                   alt = "Open magazine with model wearing a silver dress posing."
-                  src = "/fashion/rss.jpg"
+                  src = "/fashion/rss-new.png"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -64,7 +64,7 @@ export default function Methodology() {
               <div className="relative aspect-[3/4] rounded-md overflow-hidden">
                 <Image 
                   alt = "Flowing data."
-                  src = "/fashion/nlp.jpg"
+                  src = "/fashion/nlp.png"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -111,7 +111,7 @@ export default function Methodology() {
               <div className = "relative w-40 h-52 rounded-md overflow-hidden shrink-0">
                 <Image
                   alt = "Open magazine with model wearing a silver dress posing."
-                  src = "/fashion/rss.jpg"
+                  src = "/fashion/rss-new.png"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -149,7 +149,7 @@ export default function Methodology() {
               <div className = "relative w-40 h-52 rounded-md overflow-hidden shrink-0">
                 <Image 
                   alt = "Flowing data."
-                  src = "/fashion/nlp.jpg"
+                  src = "/fashion/nlp.png"
                   fill
                   style = {{
                     objectFit: 'cover'
