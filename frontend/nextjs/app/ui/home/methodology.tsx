@@ -12,16 +12,15 @@ export default function Methodology() {
         {/* --- Desktop View --- */}
         <div className = "hidden md:flex items-center">
 
-            {/* Replace this one i dont like it. */}
-            {/* Step 1 - RSS feed */}
+            {/* Step 1 - Data Source */}
             <div className = "flex-1 min-w-0">
               <p className = "font-mono text-ink md:text-sm">
-                RSS Feed
+                Data Sources
               </p>
               <div className = "relative aspect-[3/4] rounded-md overflow-hidden">
                 <Image 
-                  alt = "Open magazine with model wearing a silver dress posing."
-                  src = "/fashion/rss-new.png"
+                  alt = "Image of different fashion data sources."
+                  src = "/fashion/data.png"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -110,8 +109,8 @@ export default function Methodology() {
               {/* The rss feed needs to change*/}
               <div className = "relative w-40 h-52 rounded-md overflow-hidden shrink-0">
                 <Image
-                  alt = "Open magazine with model wearing a silver dress posing."
-                  src = "/fashion/rss-new.png"
+                  alt = "Image of different fashion data sources."
+                  src = "/fashion/data.png"
                   fill
                   style = {{
                     objectFit: 'cover'

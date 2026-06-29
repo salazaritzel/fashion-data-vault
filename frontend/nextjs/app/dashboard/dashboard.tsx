@@ -18,8 +18,8 @@ export function DisplayData() {
   const [displayResult, setDisplayResult] = useState<Trend[] | null>(null); // Stores the results of the fetch to be displayed on the dashboard
 
   useEffect(() => {
-    let ignore = false; // Ensures your code doesn’t suffer from “race conditions”.
-    setError(null); // Resets the error state before each new fetch.
+    let ignore = false;
+    setError(null);
     setIsLoading(true);
 
     fetchData(entityType, timeWindow).then(result => {
