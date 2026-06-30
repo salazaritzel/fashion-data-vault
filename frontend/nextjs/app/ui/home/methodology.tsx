@@ -15,12 +15,12 @@ export default function Methodology() {
             {/* Step 1 - Data Source */}
             <div className = "flex-1 min-w-0">
               <p className = "font-mono text-ink md:text-sm">
-                Data Sources
+                Data Collection
               </p>
               <div className = "relative aspect-[3/4] rounded-md overflow-hidden">
                 <Image 
                   alt = "Image of different fashion data sources."
-                  src = "/fashion/data.png"
+                  src = "/fashion/flowingdata.png"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -42,7 +42,7 @@ export default function Methodology() {
               <div className="relative aspect-[3/4] rounded-md overflow-hidden">
                 <Image 
                   alt = "Image of silver database."
-                  src = "/fashion/database.jpg"
+                  src = "/fashion/database-light.jpg"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -104,13 +104,13 @@ export default function Methodology() {
             {/* Step 1 - RSS feed */}
             <div  className = "self-start">
               <p className = "font-mono text-ink">
-                RSS Feed
+                Data Collection
               </p>
               {/* The rss feed needs to change*/}
               <div className = "relative w-40 h-52 rounded-md overflow-hidden shrink-0">
                 <Image
                   alt = "Image of different fashion data sources."
-                  src = "/fashion/data.png"
+                  src = "/fashion/flowingdata.png"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -129,7 +129,7 @@ export default function Methodology() {
               <div className = "relative w-40 h-52 rounded-md overflow-hidden shrink-0">
                 <Image 
                   alt = "Image of silver database."
-                  src = "/fashion/database.jpg"
+                  src = "/fashion/database-light.jpg"
                   fill
                   style = {{
                     objectFit: 'cover'
