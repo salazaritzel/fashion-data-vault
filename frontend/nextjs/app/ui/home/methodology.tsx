@@ -32,12 +32,12 @@ export default function Methodology() {
             </div>
             
             {/* For the curved lines, use SVG. */}
-            <div className="w-8 border-t border-blue-300" />
+            <div className="w-8" />
 
             {/* Step 2 - Database */}
             <div className = "flex-1 min-w-0">
               <p className = "font-mono text-ink md:text-sm">
-                Database
+                Storage
               </p>
               <div className="relative aspect-[3/4] rounded-md overflow-hidden">
                 <Image 
@@ -53,7 +53,7 @@ export default function Methodology() {
               </div>
             </div>
             
-            <div className="w-8 border-t border-blue-300" />
+            <div className="w-8" />
             
             {/* Step 3 - NLP analysis */}
             <div className = "flex-1 min-w-0">
@@ -74,7 +74,7 @@ export default function Methodology() {
               </div>
             </div>
             
-            <div className="w-8 border-t border-blue-300" />
+            <div className="w-8" />
             
             {/* Step 4 - Trend output */}
             <div className = "flex-1 min-w-0">
@@ -83,8 +83,8 @@ export default function Methodology() {
               </p>
               <div className="relative aspect-[3/4] rounded-md overflow-hidden">
                 <Image 
-                  alt = "Stylish young woman posing dramatically in black outfit, wearing oversized sunglasses, showcasing a blend of fashion and confidence against a dark monochrome background."
-                  src = "/fashion/trends.jpeg"
+                  alt = "Stylish young woman walking in a red monochrome outfit."
+                  src = "/fashion/editorial.jpg"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -124,7 +124,7 @@ export default function Methodology() {
             {/* Step 2 - Database */}
             <div className = "-mt-16 self-end">
               <p className = "font-mono text-ink text-end">
-                Database
+                Storage
               </p>
               <div className = "relative w-40 h-52 rounded-md overflow-hidden shrink-0">
                 <Image 
@@ -166,8 +166,8 @@ export default function Methodology() {
                 </p>
                 <div className = "relative w-40 h-52 rounded-md overflow-hidden shrink-0">
                     <Image 
-                    alt = "Stylish young woman posing dramatically in black outfit, wearing oversized sunglasses, showcasing a blend of fashion and confidence against a dark monochrome background."
-                    src = "/fashion/trends.jpeg"
+                    alt = "Stylish young woman walking in a red monochrome outfit."
+                    src = "/fashion/editorial.jpg"
                     fill
                     style = {{
                         objectFit: 'cover'
