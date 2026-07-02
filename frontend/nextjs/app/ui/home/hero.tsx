@@ -8,10 +8,10 @@ export default function Hero() {
     <div className = "relative flex min-h-screen flex-col overflow-hidden"> 
     
         {/* Background image */}
-        {/* I love this, but I wish the charts became smaller as the screen size decreases. */}
+        {/* To be changed. */}
         <Image 
           alt = "Runway image displaying holographic charts."
-          src = "/main-img.jpg"
+          src = "/main.jpg"
           quality = {75}
           fill
           style = {{
