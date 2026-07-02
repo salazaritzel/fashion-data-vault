@@ -11,7 +11,7 @@ export default function Hero() {
         {/* I love this, but I wish the charts became smaller as the screen size decreases. */}
         <Image 
           alt = "Runway image displaying holographic charts."
-          src = "/fdv-home.png"
+          src = "/main-img.jpg"
           quality = {75}
           fill
           style = {{
