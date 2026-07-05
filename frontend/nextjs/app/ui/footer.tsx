@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function PageFooter() {
 
     const socialLinks = [
-        { label: "GitHub", icon: "github", href: "https://github.com/salazaritzel" },
-        { label: "LinkedIn", icon: "linkedin", href: "https://linkedin.com/in/itzel-salazar" },
-        { label: "Substack", icon: "substack", href: "https://substack.com/@fashiondatavault" },
         { label: "Instagram", icon: "instagram",  href: "https://instagram.com/fashiondatavault/" },
+        { label: "GitHub", icon: "github", href: "https://github.com/salazaritzel" },
+        // { label: "LinkedIn", icon: "linkedin", href: "https://linkedin.com/in/itzel-salazar" },
+        { label: "Substack", icon: "substack", href: "https://substack.com/@fashiondatavault" },
       ];
 
     const currentYear = new Date().getFullYear();

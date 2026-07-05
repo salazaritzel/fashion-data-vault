@@ -11,7 +11,7 @@ export default function Hero() {
         {/* To be changed. */}
         <Image 
           alt = "Runway image displaying holographic charts."
-          src = "/main.jpg"
+          src = "/temp.jpg"
           quality = {75}
           fill
           style = {{
