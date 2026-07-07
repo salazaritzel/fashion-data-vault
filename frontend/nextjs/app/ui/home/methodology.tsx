@@ -42,7 +42,7 @@ export default function Methodology() {
               <div className="relative aspect-[3/4] rounded-md overflow-hidden">
                 <Image 
                   alt = "Image of silver database."
-                  src = "/fashion/database-light.jpg"
+                  src = "/fashion/database.jpg"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -83,8 +83,8 @@ export default function Methodology() {
               </p>
               <div className="relative aspect-[3/4] rounded-md overflow-hidden">
                 <Image 
-                  alt = "Stylish young woman walking in a red monochrome outfit."
-                  src = "/fashion/editorial.jpg"
+                  alt = "Brown handbag on a neutral background."
+                  src = "/fashion/handbag.jpg"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -129,7 +129,7 @@ export default function Methodology() {
               <div className = "relative w-40 h-52 rounded-md overflow-hidden shrink-0">
                 <Image 
                   alt = "Image of silver database."
-                  src = "/fashion/database-light.jpg"
+                  src = "/fashion/database.jpg"
                   fill
                   style = {{
                     objectFit: 'cover'
@@ -166,8 +166,8 @@ export default function Methodology() {
                 </p>
                 <div className = "relative w-40 h-52 rounded-md overflow-hidden shrink-0">
                     <Image 
-                    alt = "Stylish young woman walking in a red monochrome outfit."
-                    src = "/fashion/editorial.jpg"
+                    alt = "Brown handbag on a neutral background."
+                    src = "/fashion/handbag.jpg"
                     fill
                     style = {{
                         objectFit: 'cover'

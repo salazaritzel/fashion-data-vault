@@ -8,9 +8,13 @@ export default function CompaniesToWatch() {
             Companies to Watch
         </h2>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <p className = "font-style: italic">Coming Soon...</p>
-        </div>
+        <p className = "italic text-ink mb-8">
+           A curated directory of companies driving innovation across fashion technology, manufacturing, materials, retail, and sustainability.
+        </p>
+        
+        {/* Above is placeholder text. We'll be adding cards here with actual content. */}
+        {/* <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"></div> */}
+
     </div>
     );
   }

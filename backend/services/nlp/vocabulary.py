@@ -22,18 +22,18 @@ fashion_brands = [
     "Abercrombie", "Adidas", "Alexander McQueen", "Alexander Wang", "Amina Muaddi", "Asics", "Azzedine Alaïa",
     "Badgley Mischka", "Balenciaga", "Balmain", "Bottega Veneta", "Brunello Cucinelli", "Bulgari", "Burberry",
     "Calvin Klein", "Carolina Herrera", "Cartier", "Casadei", "Celia Kritharioti", "Celine", "Chanel", "Chloé", "Christian Dior", "Christian Lacroix", "Christian Louboutin", "Christopher Esber", "Chrome Hearts", "Coach",
-    "Comme des Garçons", "DÔEN", "Dolce & Gabbana", "Dsquared2", "Elie Saab", "Emilio Pucci", "Fendi",
+    "Comme des Garçons", "DÔEN", "Dolce & Gabbana", "Dsquared2", "Elie Saab", "Emilio Pucci", "Fendi", "Ferragamo",
     "Ganni", "Gianvito Rossi", "Giorgio Armani", "Giuseppe Zanotti", "Givenchy", "Gucci",
     "H&M", "Helmut Lang", "Hermès", "Herve Leger", "Isabel Marant",
     "Jacquemus", "Jean Paul Gaultier", "Jill Sander", "Jimmy Choo", "John Galliano", "Jordan",
-    "Khaite", "Lanvin", "Levi's", "Loewe", "Louis Vuitton", "Luar", "Lu'u Dan", "Magliano",
-    "Maison Margiela", "Mango", "Manolo Blahnik", "Marc Jacobs", "MaxMara", "Michael Kors", "Miss Sohee", "Miu Miu", "Moschino",
+    "Khaite", "KNWLS", "Lacoste", "Lanvin", "Levi's", "Loewe", "Louis Vuitton", "Luar", "Lu'u Dan", "Magliano",
+    "Maison Margiela", "Mango", "Manolo Blahnik", "Marc Jacobs", "Marni","MaxMara", "Michael Kors", "Miss Sohee", "Miu Miu", "Moschino",
     "New Balance", "Nike", "North Face", "Off-White", "Oscar de la Renta",
     "Paco Rabanne", "Prada", "Puma", "Ralph Lauren", "Robert Wun", "Roberto Cavalli",
     "Salomon", "Salvatore Ferragamo", "Schiaparelli", "Simone Rocha", "Skims", "Soshiotsuki", "Stella McCartney", "Steve Madden",
     "The Attico", "The Row", "Thierry Mugler", "Thom Browne", "Tom Ford", "Toteme",
     "Valentino", "Van Cleef & Arpels", "Vera Wang", "Versace", "Vetements", "Victoria Beckham", "Vivienne Westwood",
-    "Y-3", "Yohji Yamamoto", "Yves Saint Laurent", "Zac Posen", "Zara", "Zimmermann", "Zuhair Murad"
+    "Y-3", "Yohji Yamamoto", "Yves Saint Laurent", "Zac Posen", "Zara", "Zimmermann", "Zuhair Murad", "16Arlington"
 ]
 
 fashion_nouns = [
