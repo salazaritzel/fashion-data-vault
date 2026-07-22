@@ -8,7 +8,7 @@ export default function Substack() {
             Substack
         </h2>
 
-        <p className = "font-mono text-xs text-ink mb-8">
+        <p className = "font-mono text-sm text-ink mb-8">
             My personal narrative. Writing and commentary on fashion, data, and the systems shaping the industry.
         </p>
         
