@@ -8,7 +8,7 @@ export default function ReadingRoom() {
             Reading Room
         </h2>
 
-        <p className = "font-monoitalic text-ink/85 mb-8">
+        <p className = "font-mono italic text-ink/85 mb-8">
             A collection of research papers, industry reports, whitepapers, books and articles shaping the future of fashion.
         </p>
         
