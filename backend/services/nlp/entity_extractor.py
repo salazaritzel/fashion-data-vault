@@ -461,7 +461,7 @@ class EntityExtractor:
     # =================== Backfilling Data ===================
     def backfill(self):
         try:
-            start_date =  date(2026, 7, 8) # Starting from November 1st (anything prior is too scattered) (i reaaaally need to setup a cron job)
+            start_date =  date(2026, 7, 21) # Starting from November 1st (anything prior is too scattered) (i reaaaally need to setup a cron job)
             # start_date = datetime.now(local_timezone).date() - timedelta(days = 1) # For testing, backfill the last 5 days
             current_date = start_date
             end_date = datetime.now(local_timezone).date() # Backfill up to today (4/15/26)
