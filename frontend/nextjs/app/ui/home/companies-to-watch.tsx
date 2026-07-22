@@ -8,7 +8,7 @@ export default function CompaniesToWatch() {
             Companies to Watch
         </h2>
 
-        <p className = "font-mono italic text-ink mb-8">
+        <p className = "font-mono text-xs text-ink mb-8">
            A curated directory of companies driving innovation across fashion technology, manufacturing, materials, retail, and sustainability.
         </p>
         

@@ -8,7 +8,7 @@ export default function Headlines() {
             In the Headlines
         </h2>
 
-        <p className = "font-mono italic text-ink mb-8">
+        <p className = "font-mono text-xs text-ink mb-8">
             The latest funding rounds, product launches, partnerships, acquisitions, and major industry developments.
         </p>
                 
