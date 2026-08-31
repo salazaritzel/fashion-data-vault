@@ -28,4 +28,4 @@ logs/
 *.dump
 
 .vscode/
-.idea/
+.idea/scripts/scan_before_public.sh

@@ -1,6 +1,6 @@
 # Fashion Data Vault
 
-A fashion trend intelligence platform that extracts trends, brands, materials, and seasons from 7000+ RSS feed entries across five leading fashion publications using a custom spaCy NLP pipeline.
+A fashion trend intelligence platform that extracts trends, brands, materials, and seasons from 10,000+ RSS article entries across five leading fashion publications using a custom spaCy NLP pipeline.
 
 ![Screenshot of FDV dashboard](assets/fdv_dashboard.jpg)
 _Website: [fashiondatavault.com](https://fashiondatavault.com)_

@@ -9,7 +9,7 @@ export default function ReadingRoom() {
         </h2>
 
         <p className = "font-mono text-sm text-ink/85 mb-8">
-            A collection of research papers, industry reports, whitepapers, books and articles shaping the future of fashion.
+            A collection of research papers, industry reports, whitepapers, books, and articles shaping the future of fashion.
         </p>
         
         {/* Above is placeholder text. We'll be adding cards here with actual content. */}
