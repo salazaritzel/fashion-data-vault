@@ -4,7 +4,7 @@ export default function PageFooter() {
 
     const socialLinks = [
         { label: "Instagram", icon: "instagram",  href: "https://instagram.com/fashiondatavault/" },
-        { label: "GitHub", icon: "github", href: "https://github.com/salazaritzel" },
+        { label: "GitHub", icon: "github", href: "https://github.com/salazaritzel/fashion-data-vault" },
         // { label: "LinkedIn", icon: "linkedin", href: "https://linkedin.com/in/itzel-salazar" },
         { label: "Substack", icon: "substack", href: "https://substack.com/@fashiondatavault" },
       ];
