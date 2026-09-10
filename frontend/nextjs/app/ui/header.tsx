@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Header() {
     return (
         <header className = "sticky top-0 z-50 px-4 sm:px-10 py-8 bg-paper">
-            <Link href = "/">
+            <Link href = "/" className="inline-flex self-start">
                 <FDVLogo />
             </Link>
         </header>

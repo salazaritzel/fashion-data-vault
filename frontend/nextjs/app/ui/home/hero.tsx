@@ -21,9 +21,9 @@ export default function Hero() {
           preload
         />
         
-        <div className = "relative z-10 flex flex-col h-full px-4 sm:px-10 py-8">    
+        <div className = "relative z-10 flex flex-col items-start px-4 sm:px-10 py-8">    
           {/* Fashion Data Vault logo */}
-          <Link href = "/">
+          <Link href = "/" className="inline-flex">
             <FDVLogo textColor = "text-paper" />
           </Link>
 
