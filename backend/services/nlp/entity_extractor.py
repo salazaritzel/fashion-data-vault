@@ -8,22 +8,26 @@ from spacy.matcher import Matcher
 from spacy.pipeline import EntityRuler
 from collections import Counter
 # from backend.shared.utils.logging_config import configure_logging
-from backend.services.nlp.vocabulary import materials, fashion_brands, fashion_nouns, fashion_adjectives
+from backend.services.nlp import nlp_pipeline
+from backend.services.nlp.vocabulary import (
+    aesthetics, colors, materials, fashion_brands, fashion_nouns, fashion_adjectives, fashion_collections
+)
 
 # configure_logging() # DELETE THIS BUT VERIFY
 logger = logging.getLogger(__name__)
 
-# Setting my local timezone for accurate trend collection and analysis
+# Setting my local timezone for accurate trend collection and analysis (Change to ET or UTC!)
 local_timezone = ZoneInfo("America/Denver")
 
 class EntityExtractor:
-    """Extract fashion entities (seasons, collections, brands, materials, trends) from articles using spaCy's NLP."""
+    """Extract fashion entities from RSS articles using spaCy's NLP."""
 
-    # Initializing the python object, defining defaults.
+    # Initializing the object and defining its defaults.
     def __init__(self):
         self.nlp = spacy.load("en_core_web_md")
         self.matcher = self.define_matcher()
         self.entity_ruler = self.define_entity_ruler()    
+        self.nlp.add_pipe("merge_vocab_phrases", last = True)
     
     # =================== Loading Articles by Date ===================
     def load_articles(self, date):
@@ -41,19 +45,15 @@ class EntityExtractor:
             with get_connection() as conn:
                 data_frame = pd.read_sql(query, conn, params = (date,))
 
-            data_frame["full_text"] = (data_frame["title"] + " " + data_frame["content"].fillna(""))
+            data_frame["full_text"] = (data_frame["title"].fillna("") + " " + data_frame["content"].fillna("")).str.strip()
 
             logger.info("Loaded %d article(s) for date: %s.", len(data_frame), date)
-            
+
             return data_frame
         
         except Exception as err:
             logger.error("Error loading articles for date %s: %s", date, err, exc_info = True)
             raise
-
-    # TODO: This is something that really won't be fixed until we have real machine learning applied on here. 
-    # My top brand was Prada, The Devil Wears Prada 2 just released so ~50% of my extracted trends were of that, meaning they're polluted and I need to hardcode a solution. 
-    # Clean data is something that is very difficult to achieve. Right now I'm going to finish the frontend, then come back and hardcode the exclusion list.
     
     # =================== Define Matcher for Trend Detection ===================
     def define_matcher(self):
@@ -96,15 +96,16 @@ class EntityExtractor:
         matcher.add("FASHION_TREND", [adj_noun, mat_noun, mat_adj_noun, brand_noun, brand_adj_noun])
 
         return matcher
-    
+
     # =================== Define Entity Ruler for Season, Brand, and Material Extraction ===================
     def define_entity_ruler(self):
         """Revised Entity Ruler patterns for seasons, brands, and materials."""
         
-        ruler = self.nlp.add_pipe("entity_ruler", before = "ner") # Wrap around if else statements
+        ruler = self.nlp.add_pipe("entity_ruler", before = "ner")
 
         # Fashion Seasons Entity Ruler Patterns
         fashion_seasons_pattern = [
+
             # ---------- Abbreviated Seasons ----------
             # One single token with no spaces: "SS26"
             {
@@ -112,26 +113,26 @@ class EntityExtractor:
                 "pattern": [
                     {"LOWER": {"REGEX": r"^(ss|aw|fw)\d{2,4}$"}}
                 ]
-            }, 
-      
-            # One single token with slashes, no spaces: "S/S26"
+            },
+
+            # Abbreviated season with a slash and no spaces: "S/S26"
             {
                 "label": "FASHION_SEASON",
                 "pattern": [
-                    {"TEXT": {"REGEX": r"^[SFA]$"}},
-                    {"TEXT": "/"}, # "/"
-                    {"TEXT": {"REGEX": r"^[SW]\d{2,4}$"}}
+                    {"LOWER": {"IN": ["s", "f", "a"]}},
+                    {"TEXT": "/"},
+                    {"LOWER": {"REGEX": r"^[sw]\d{2,4}$"}}
                 ]
             },
-            
+
             # Abbreviated season separated by a slash: "S/S 2026"
             {
                 "label": "FASHION_SEASON",
                 "pattern": [
                     {"LOWER": {"IN": ["s", "f", "a"]}},
-                    {"TEXT": {"IN": "/"}},
+                    {"TEXT": "/"},
                     {"LOWER": {"IN": ["s", "w"]}},
-                    {"TEXT": {"REGEX": r"^\d{2,4}$"}}
+                    {"TEXT": {"REGEX": r"^(20)?\d{2}$"}}
                 ]
             },
 
@@ -140,7 +141,7 @@ class EntityExtractor:
                 "label": "FASHION_SEASON",
                 "pattern": [
                     {"LOWER": {"IN": ["ss", "fw", "aw"]}},
-                    {"TEXT": {"REGEX": r"^\d{2,4}$"}}
+                    {"TEXT": {"REGEX": r"^(20)?\d{2}$"}}
                 ]
             },
 
@@ -150,49 +151,49 @@ class EntityExtractor:
                 "label": "FASHION_SEASON",
                 "pattern": [
                     {"LOWER": {"IN": ["resort", "cruise"]}},
-                    {"TEXT": {"REGEX": r"^\d{2,4}$"}}
+                    {"TEXT": {"REGEX": r"^20\d{2}$"}}
                 ]
             },
 
-            # Pre-Fall as a single token
+            # Pre-fall written as one word: "Prefall 2026"
             {
                 "label": "FASHION_SEASON",
                 "pattern": [
-                    {"LOWER": "pre-fall"},
-                    {"TEXT": {"REGEX": r"^\d{2,4}$"}}
+                    {"LOWER": "prefall"},
+                    {"TEXT": {"REGEX": r"^20\d{2}$"}}
                 ]
             },
 
-            # Pre-fall with space: "Pre Fall 2026"
+            # Pre-fall with a space: "Pre Fall 2026"
             {
                 "label": "FASHION_SEASON",
                 "pattern": [
                     {"LOWER": "pre"},
                     {"LOWER": "fall"},
-                    {"TEXT": {"REGEX": r"^\d{2,4}$"}}
+                    {"TEXT": {"REGEX": r"^20\d{2}$"}}
                 ]
             },
 
-            # Pre-fall tokenized as three tokens: "Pre / Fall 2026"
+            # Pre-fall with a hyphen or slash (spaCy splits it into three tokens): "Pre-Fall 2026", "Pre/Fall 2026"
             {
                 "label": "FASHION_SEASON",
                 "pattern": [
                     {"LOWER": "pre"},
-                    {"TEXT": "-"},
+                    {"TEXT": {"IN": ["/", "-"]}},
                     {"LOWER": "fall"},
-                    {"TEXT": {"REGEX": r"^\d{2,4}$"}}
+                    {"TEXT": {"REGEX": r"^20\d{2}$"}}
                 ]
             },
 
             # ---------- Full Season Names ----------
-            # Full season name using separator: "Spring/Summer 2026"
+            # Full season name using a separator: "Spring/Summer 2026", "Fall-Winter 2026"
             {
                 "label": "FASHION_SEASON",
                 "pattern": [
-                    {"LOWER": {"IN": ["spring", "summer", "autumn", "fall", "winter"]}}, # TODO:Review this pattern. Should I remove summer and winter??
+                    {"LOWER": {"IN": ["spring", "fall", "autumn"]}},
                     {"TEXT": {"IN": ["/", "-"]}},
                     {"LOWER": {"IN": ["summer", "winter"]}},
-                    {"TEXT": {"REGEX": r"^\d{2,4}$"}}
+                    {"TEXT": {"REGEX": r"^20\d{2}$"}}
                 ]
             },
 
@@ -200,28 +201,28 @@ class EntityExtractor:
             {
                 "label": "FASHION_SEASON",
                 "pattern": [
-                    {"LOWER": {"IN": ["spring", "summer", "autumn", "fall", "winter"]}},
+                    {"LOWER": {"IN": ["spring", "fall", "autumn"]}},
                     {"LOWER": {"IN": ["summer", "winter"]}},
-                    {"TEXT": {"REGEX": r"^\d{2,4}$"}}
+                    {"TEXT": {"REGEX": r"^20\d{2}$"}}
                 ]
             },
-            
+
             # One single season and year: "Spring 2026"
             {
                 "label": "FASHION_SEASON",
                 "pattern": [
                     {"LOWER": {"IN": ["spring", "summer", "autumn", "fall", "winter"]}},
-                    {"TEXT": {"REGEX": r"^\d{2,4}$"}}
+                    {"TEXT": {"REGEX": r"^20\d{2}$"}}
                 ]
             },
 
             # ---------- Year First Format ----------
-            # Year and two season name: "2026 Spring/Summer"
+            # Year and two season names: "2026 Spring/Summer"
             {
                 "label": "FASHION_SEASON",
                 "pattern": [
-                    {"TEXT": {"REGEX": r"^\d{2,4}$"}},
-                    {"LOWER": {"IN": ["spring", "summer", "autumn", "fall", "winter"]}},
+                    {"TEXT": {"REGEX": r"^20\d{2}$"}},
+                    {"LOWER": {"IN": ["spring", "fall", "autumn"]}},
                     {"TEXT": {"IN": ["/", "-"]}},
                     {"LOWER": {"IN": ["summer", "winter"]}}
                 ]
@@ -231,40 +232,37 @@ class EntityExtractor:
             {
                 "label": "FASHION_SEASON",
                 "pattern": [
-                    {"TEXT": {"REGEX": r"^\d{2,4}$"}},
+                    {"TEXT": {"REGEX": r"^20\d{2}$"}},
                     {"LOWER": {"IN": ["spring", "summer", "autumn", "fall", "winter"]}}
                 ]
             },
 
+            # Year and pre-collection: "2026 Resort"
             {
                 "label": "FASHION_SEASON",
                 "pattern": [
-                    {"TEXT": {"REGEX": r"^\d{2,4}$"}},
-                    {"LOWER": {"IN": ["resort", "cruise"]}},
+                    {"TEXT": {"REGEX": r"^20\d{2}$"}},
+                    {"LOWER": {"IN": ["resort", "cruise"]}}
                 ]
             },
 
+            # Year and pre-fall: "2026 Pre-Fall", "2026 Pre/Fall"
             {
                 "label": "FASHION_SEASON",
                 "pattern": [
-                    {"TEXT": {"REGEX": r"^\d{2,4}$"}},
-                    {"LOWER": {"IN": "pre"}},
-                    {"TEXT": {"IN": "/"}},
-                    {"LOWER": {"IN": "fall"}}
+                    {"TEXT": {"REGEX": r"^20\d{2}$"}},
+                    {"LOWER": "pre"},
+                    {"TEXT": {"IN": ["/", "-"]}},
+                    {"LOWER": "fall"}
                 ]
             },
 
-            # ---------- Collection Types ----------
-            {"label": "COLLECTION_TYPE", "pattern": "Haute Couture"},
-            {"label": "COLLECTION_TYPE", "pattern": "haute couture"},
-            {"label": "COLLECTION_TYPE", "pattern": "Couture"},
-            {"label": "COLLECTION_TYPE", "pattern": "couture"},
-            {"label": "COLLECTION_TYPE", "pattern": "Ready-to-Wear"},
-            {"label": "COLLECTION_TYPE", "pattern": "ready-to-wear"},
-            {"label": "COLLECTION_TYPE", "pattern": "Womenswear"},
-            {"label": "COLLECTION_TYPE", "pattern": "womenswear"},
-            {"label": "COLLECTION_TYPE", "pattern": "Menswear"},
-            {"label": "COLLECTION_TYPE", "pattern": "menswear"}
+        ]
+
+        # Aesthetics Pattern (boho-grunge, Y2K, clean girl)
+        aesthetics_pattern = [
+            {"label": "AESTHETIC", "pattern": aesthetic.lower()}
+            for aesthetic in aesthetics
         ]
 
         # Brand Names Patterns
@@ -272,6 +270,18 @@ class EntityExtractor:
             {"label": "FASHION_BRAND", "pattern": brand.lower()}
             for brand in fashion_brands
         ] 
+
+        # Color Patterns
+        colors_pattern = [
+            {"label": "COLOR", "pattern": color.lower()}
+            for color in colors
+        ]
+
+        # Fashion Collection Patterns
+        fashion_collections_pattern = [
+            {"label": "COLLECTION_TYPE", "pattern": fashion_collection.lower()}
+            for fashion_collection in fashion_collections
+        ]
 
         # Materials Patterns
         materials_pattern = [
@@ -282,59 +292,60 @@ class EntityExtractor:
         # Adding the new patterns to the entity ruler
         ruler.add_patterns(fashion_seasons_pattern)
         ruler.add_patterns(brands_pattern)
+        ruler.add_patterns(colors_pattern)
         ruler.add_patterns(materials_pattern)
-        
+        ruler.add_patterns(aesthetics_pattern)
+        ruler.add_patterns(fashion_collections_pattern)
         return ruler
     
     # =================== Extract Trends ===================
     def extract_trends(self, data_frame = None):
         """Run trend extraction over collected articles to identify trends."""
+        
+        print(f"Running trend extraction on {len(data_frame) if data_frame is not None else len(self.data_frame)} articles.")
         try:
             if data_frame is None: 
                 data_frame = self.data_frame
 
             trends = []
-            
+
             for i, row in data_frame.iterrows():
                 doc = self.nlp(row['full_text'])
                 matches = self.matcher(doc)
-                
-                # Deduplicate. If trend appears more than once within the same article, we only count it once.
+
+                # If trend appears more than once within the same article, we only count it once.
                 found_trends = set()
                 
                 for match_id, start, end in matches:
                     span = doc[start:end]
                     trend_lemma = span.lemma_
                     trend_raw = span.text
-                    # print(f"Trend (lemma): '{trend_lemma}'")
-                    # print(f"Trend (raw): '{trend_raw}'")
                     found_trends.add((trend_lemma, trend_raw)) 
-                    
-                    # Add found trends from this article to the general list of trends
-                    for trend in found_trends:
-                        trends.append(trend)
-                
-            # if found_trends:
-            #     print(f"Found trends: {set(trend_raw for trend_lemma, trend_raw in found_trends)} in article {i + 1} : {row['full_text']}") 
-        
-            # Hmmmm.... I need to decide what I'm going to do here.
+                    # print(f"Matched trend: {span.text}")
+                 
+                # Add found trends from this article to the general list of trends
+                for trend in found_trends:
+                    trends.append(trend)
+
             # trends_dic = {}
             # for trend_lemma, trend_raw in trends:
             #     if trend_lemma not in trends_dic:
             #         trends_dic[trend_lemma] = trend_raw
 
-            trend_counts = Counter(trend_lemma for trend_lemma, trend_raw in trends)
+            trend_counts = Counter(
+                trend_lemma for trend_lemma, trend_raw in trends
+            )
 
             logger.info("Extracted %d unique trend(s) from %d article(s).", len(trend_counts), len(data_frame))
                 
-            return trend_counts # trend_dic
+            return trend_counts
         
         except Exception as err:
             logger.error("Failed to extract trends: %s", err, exc_info = True)
             raise
 
     # =================== Extract Entities ===================
-    def extract_entities(self, data_frame = None):
+    def extract_entities(self, data_frame = None): # REDO this function, too long and repetitive.
         """Run the entity ruler over collected articles to count mentions of seasons, collections, brands, and materials."""
 
         try:
@@ -345,6 +356,8 @@ class EntityExtractor:
             collection_found = []
             brands_found = []
             materials_found = []
+            aesthetics_found = []
+            colors_found = []
 
             # Dedup mentions within same article. Similar to how we did it with extract_trends()
             for i, row in data_frame.iterrows():
@@ -355,6 +368,8 @@ class EntityExtractor:
                 collection_mentioned = set()
                 brands_mentioned = set()
                 materials_mentioned = set()
+                aesthetics_mentioned = set()
+                colors_mentioned = set()
 
                 for ent in doc.ents:
                     if ent.label_ == "FASHION_SEASON":
@@ -365,6 +380,10 @@ class EntityExtractor:
                         brands_mentioned.add(ent.text)
                     elif ent.label_ == "MATERIAL":
                         materials_mentioned.add(ent.text)
+                    elif ent.label_ == "AESTHETIC":
+                        aesthetics_mentioned.add(ent.text)
+                    elif ent.label_ == "COLOR":
+                        colors_mentioned.add(ent.text)
 
                 for season in seasons_mentioned:
                     seasons_found.append(season)
@@ -374,6 +393,10 @@ class EntityExtractor:
                     brands_found.append(brand)
                 for material in materials_mentioned:
                     materials_found.append(material)
+                for aesthetic in aesthetics_mentioned:
+                    aesthetics_found.append(aesthetic)
+                for color in colors_mentioned:
+                    colors_found.append(color)
 
                 # Debug print statements, delete later ******************
                 # if seasons_mentioned:
@@ -389,18 +412,20 @@ class EntityExtractor:
             collections_count = Counter(collection_found)
             brands_count = Counter(brands_found)
             materials_count = Counter(materials_found) 
+            aesthetics_count = Counter(aesthetics_found)
+            colors_count = Counter(colors_found)
 
-            logger.info("Extracted %d unique season(s), %d unique collection(s), %d unique brand(s), and %d unique material(s) from %d article(s).", 
-                        len(seasons_count), len(collections_count), len(brands_count), len(materials_count), len(data_frame))
+            logger.info("Extracted %d unique season(s), %d unique collection(s), %d unique brand(s), %d unique material(s), %d color(s), and %d unique aesthetic(s) from %d article(s).", 
+                        len(seasons_count), len(collections_count), len(brands_count), len(materials_count), len(colors_count), len(aesthetics_count), len(data_frame))
             
-            return seasons_count, collections_count, brands_count, materials_count   
+            return seasons_count, collections_count, brands_count, materials_count, colors_count, aesthetics_count
 
         except Exception as err:    
             logger.error("Failed to extract entities: %s", err, exc_info = True)
             raise 
 
     # ================ Save Results to Database ================
-    def save_results_to_database(self, trend_counts, season_counts, collection_counts, brand_counts, material_counts, snapshot_date = None):
+    def save_results_to_database(self, trend_counts, season_counts, collection_counts, brand_counts, material_counts, color_counts, aesthetic_counts, snapshot_date = None):
         """Save extracted trends, seasons, collections, brands, and materials to the database."""
 
         try:
@@ -420,7 +445,9 @@ class EntityExtractor:
                 "season": season_counts,
                 "collection": collection_counts,
                 "brand": brand_counts,
-                "material": material_counts
+                "material": material_counts,
+                "aesthetic": aesthetic_counts,
+                "color": color_counts
             }
 
             saved_count = 0
@@ -461,7 +488,7 @@ class EntityExtractor:
     # =================== Backfilling Data ===================
     def backfill(self):
         try:
-            start_date =  date(2026, 8, 15) # Starting from November 1st (anything prior is too scattered) (i reaaaally need to setup a cron job)
+            start_date =  date(2026, 10, 16) # Starting from November 1st (anything prior is too scattered) (i reaaaally need to setup a cron job)
             # start_date = datetime.now(local_timezone).date() - timedelta(days = 1) # For testing, backfill the last 5 days
             current_date = start_date
             end_date = datetime.now(local_timezone).date() # Backfill up to today (4/15/26)
@@ -478,8 +505,8 @@ class EntityExtractor:
                     logger.info("Processing current date: %s with total number of articles: %d.", current_date, len(df))
         
                     trend_counts = self.extract_trends(df)
-                    season_counts, collection_counts, brand_counts, material_counts = self.extract_entities(df)
-                    self.save_results_to_database(trend_counts, season_counts, collection_counts, brand_counts, material_counts, snapshot_date = current_date)
+                    season_counts, collection_counts, brand_counts, material_counts, color_counts, aesthetic_counts = self.extract_entities(df)
+                    self.save_results_to_database(trend_counts, season_counts, collection_counts, brand_counts, material_counts, color_counts, aesthetic_counts, snapshot_date = current_date)
                     processed_dates += 1     
                 else:
                     logger.debug("No articles found for date: %s.", current_date)      
@@ -499,8 +526,8 @@ class EntityExtractor:
             today = datetime.now(local_timezone).date()
             data_frame = self.load_articles(today)
             trend_counts = self.extract_trends(data_frame)
-            season_counts, collection_counts, brand_counts, material_counts = self.extract_entities(data_frame)
-            self.save_results_to_database(trend_counts, season_counts, collection_counts, brand_counts, material_counts, snapshot_date = today)
+            season_counts, collection_counts, brand_counts, material_counts, color_counts, aesthetic_counts = self.extract_entities(data_frame)
+            self.save_results_to_database(trend_counts, season_counts, collection_counts, brand_counts, material_counts, color_counts, aesthetic_counts, snapshot_date = today)
             logger.info("Daily analysis completed successfully.")
         except Exception as err:
             logger.error("Daily analysis failed: %s", err, exc_info = True)
