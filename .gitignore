@@ -28,4 +28,5 @@ logs/
 *.dump
 
 .vscode/
-.idea/scripts/scan_before_public.sh
+notebooks/trends_extraction.ipynb
+scripts/scan_before_public.sh
