@@ -60,7 +60,7 @@ fashion_nouns = [
     "bracelet", "bralette", "brooch",
     "camisole", "cape", "cardigan", "choker", "clog", "clutch", "coat", "corset", "corsetry",
     "dress",
-    "earring",
+    "earring", "eveningwear",
     "flat",
     "glove", "gown",
     "handbag", "hat", "headband", "heel", "hoodie",
@@ -113,7 +113,7 @@ fashion_adjectives = [
 colors = [
     "alabaster", "alice blue", "amaranth", "amber", "apple green", "apricot", "aqua", "aquamarine", "army green", "artichoke", "ash gray",
     "auburn", "avocado", "azure",
-    "baby blue", "baby pink", "barn red", "battleship gray", "beige", "bisque", "black", "black olive", "blood red", "blue", "blush",
+    "baby blue", "baby pink", "barn red", "battleship gray", "beige", "bisque", "black olive", "blood red", "blue", "blush",
     "bone", "bottle green", "brass", "brick red", "bright blue", "bright red", "brink pink", "brown", "bubblegum", "buff", "burgundy",
     "burnt umber", "butter yellow", "butterscotch",
     "cadmium red", "cadmium yellow", "camel", "canary yellow", "candy apple red", "carmine", "carnation pink", "carrot", "celadon",
@@ -150,7 +150,7 @@ aesthetics = [
     "minimalist", "maximalist", "boho", "preppy", "grunge", "punk",
     "goth", "sporty", "western", "romantic", "edgy", "coquette", 
     "clean girl", "showgirl", "boho-grunge", "gorpcore", "quiet luxury", 
-    "old money", "balletcore", "cottagecore", "Y2K", "mob wife"
+    "old money", "balletcore", "cottagecore", "y2k", "mob wife"
 ]
 
 
