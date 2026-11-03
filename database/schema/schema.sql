@@ -18,31 +18,42 @@ CREATE TABLE aggregates_trend (id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 );
 
 -- Creating a new table to track the counts of trends, seasons, brands, and material mentions.
+-- CREATE TABLE IF NOT EXISTS trend_summary (id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+--                                                                       entity_type TEXT NOT NULL, -- trend, season, brand, material
+--  entity_value TEXT NOT NULL, -- if trend: leather jacket, if season: FW2026, etc.
+--  count INTEGER NOT NULL, -- but what if there's no count, well if there were not then it wouldnt even be here
+--  snapshot_date DATE NOT NULL, -- The date that this summary is for (kind of like published date (remember we're doing daily snapshots now which prevents overlaps and is overall cleaner))
+--  created_at TIMESTAMP DEFAULT NOW(), -- when this record was created
+--  CONSTRAINT unique_values UNIQUE(entity_type, entity_value, snapshot_date) -- prevent duplicates for the same entity and period
+-- );
 
-CREATE TABLE IF NOT EXISTS trend_summary (id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-                                                                      entity_type TEXT NOT NULL, -- trend, season, brand, material
- entity_value TEXT NOT NULL, -- if trend: leather jacket, if season: FW2026, etc.
- count INTEGER NOT NULL, -- but what if there's no count, well if there were not then it wouldnt even be here
- snapshot_date DATE NOT NULL, -- The date that this summary is for (kind of like published date (remember we're doing daily snapshots now which prevents overlaps and is overall cleaner))
- created_at TIMESTAMP DEFAULT NOW(), -- when this record was created
- CONSTRAINT unique_values UNIQUE(entity_type, entity_value, snapshot_date) -- prevent duplicates for the same entity and period
+-- NEW TREND ENTITIES TABLE WITH FIXES
+CREATE TABLE IF NOT EXISTS article_entities (
+    article_id UUID NOT NULL REFERENCES aggregates_trend (id) ON DELETE CASCADE,
+    entity_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    entity_type TEXT NOT NULL,
+    entity_value TEXT NOT NULL,›
+    extracted_at TIMESTAMPTZ DEFAULT NOW() NOT NULL,
+    CONSTRAINT unique_article_entities_values UNIQUE(
+        article_id, entity_type, entity_value
+    )
 );
+-- Wait, but if we're only doing one trend per entry, then why do we need to override? Wouldn't that do what our back fill function already does? Because okay our extraction method improved, the trend itself didn't change, a plaid jacket will still be present in the article, but say after updating the extraction method, we find a new trend, that is inserted as a new entry. 
+CREATE INDEX IF NOT EXISTS article_entities_lookup ON article_entities (entity_type, entity_value);
 
 -- Drop (delete) an existing table
 
 SELECT DISTINCT entity_type
 FROM trend_summary;
-
+SELECT * FROM article_entities ORDER BY extracted_at DESC LIMIT 20;
 
 DROP TABLE IF EXISTS trend_summary;
-
--- To view aggregates_trend table
 
 DELETE
 FROM aggregates_trend
 WHERE source_name = 'Women''s Wear Daily';
 
-
+SELECT * FROM article_entities ORDER BY extracted_at DESC LIMIT 20;
 SELECT id,
        source_type,
        source_name,
