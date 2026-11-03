@@ -1,4 +1,5 @@
 import pytest
+import pandas as pd
 import uuid
 from backend.services.nlp.entity_extractor import EntityExtractor
 
@@ -70,3 +71,33 @@ def test_save_replaces_old_rows(extractor, conn):
         with conn.cursor() as cur:
             cur.execute("DELETE FROM aggregates_trend WHERE id = %s", (article_id,))
         conn.commit()
+
+def test_process_articles_saves_each_article(extractor, conn):
+    first_id = make_article(conn)
+    second_id = make_article(conn)
+    try:
+        data_frame = pd.DataFrame({
+            "id": [first_id, second_id],
+            "full_text": [
+                "miu miu always draws an it-girl crowd. from alexa chung in a striped cardigan and pencil skirt to maude apatow in relaxed suiting, the front row looked as cool as ever for miu miu's spring 2027 show.",
+                "i went to pilates class today",
+            ],
+        })
+
+        count = extractor.process_articles(data_frame, conn)
+        assert count == 2
+
+        assert {("brand", "miu miu"), ("season", "spring 2027")} <= rows_for(conn, first_id)
+        assert rows_for(conn, second_id) == set()
+    finally:
+        conn.rollback()
+        with conn.cursor() as cur:
+            cur.execute("DELETE FROM aggregates_trend WHERE id = %s", (first_id,))
+            cur.execute("DELETE FROM aggregates_trend WHERE id = %s", (second_id,))
+        conn.commit()
+
+def test_process_articles_with_no_articles_returns_zero(extractor, conn):
+    data_frame = pd.DataFrame({"id": [], "full_text": []})
+    assert extractor.process_articles(data_frame, conn) == 0
+
+       
