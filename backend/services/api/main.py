@@ -7,7 +7,6 @@ app = FastAPI()
 
 # DOCS: When the backend is in a different "origin" than the frontend, use CORS (Cross-Origin Resource Sharing).
 origins = [
-    # Add vercel frontend url here when deployed
     "http://localhost:3000",
     "https://fashion-data-vault.vercel.app",
     "https://www.fashiondatavault.com"
@@ -32,10 +31,11 @@ async def get_trends(
     time_window: Annotated[int, Query(ge = 1, le = 3653)] = 30
 ):
     query = """
-        SELECT entity_value, SUM(count) AS total 
-        FROM trend_summary
-        WHERE entity_type = %s AND snapshot_date  >= CURRENT_DATE - (%s * INTERVAL '1 day')
-        GROUP BY entity_value
+        SELECT e.entity_value, COUNT(*) AS total 
+        FROM article_entities e
+        JOIN aggregates_trend a ON a.id = e.article_id
+        WHERE e.entity_type = %s AND a.published_at >= CURRENT_DATE - (%s * INTERVAL '1 day')
+        GROUP BY e.entity_value
         ORDER BY total DESC
         LIMIT 50;  
     """
@@ -51,14 +51,4 @@ async def get_trends(
 
     return [{"entity": row[0], "total": row[1]} for row in rows]
 
-
-# trend_summary schema
-#  CREATE TABLE IF NOT EXISTS trend_summary (
-#  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),                                                               
-#  entity_type TEXT NOT NULL,
-#  entity_value TEXT NOT NULL,
-#  count INTEGER NOT NULL,
-#  snapshot_date DATE NOT NULL,
-#  created_at TIMESTAMP DEFAULT NOW(),
-#  CONSTRAINT unique_values UNIQUE(entity_type, entity_value, snapshot_date)
-# );
+# Trends are counted from article_entities: one row per article per entity, so COUNT(*) is the number of articles that mentioned the entity.
