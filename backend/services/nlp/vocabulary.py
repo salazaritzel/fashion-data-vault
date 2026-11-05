@@ -6,7 +6,7 @@ materials = [
     "corduroy", "cork", "cotton", "crepe", "crêpe", "crochet", "crystal", "cupro",
     "damask", "denim",
     "ecovero", "elastane", "elastene", "elastin",
-    "faux fur", "felt", "fishnet", "flannel", "flax", "fleece", "french terry", "fur",
+    "faux fur", "fishnet", "flannel", "flax", "fleece", "french terry", "fur",
     "gabardine", "gauze", "georgette", "gingham", "grosgrain",
     "hemp",
     "jacquard", "jelly", "jute",
@@ -56,11 +56,11 @@ fashion_brands = [
 
 fashion_nouns = [
     "accessory",
-    "backpack", "bag", "baguette", "bandana", "bangle", "beanie", "belt", "beret", "bikini", "blazer", "blouse", "bodysuit", "boot", "bootie",
+    "backpack", "bag", "baguette", "bandana", "bangle", "beanie", "belt", "beret", "bikini", "blazer", "blouse", "bodysuit", "boot", "bootie", "bow",
     "bracelet", "bralette", "brooch",
     "camisole", "cape", "cardigan", "choker", "clog", "clutch", "coat", "corset", "corsetry",
     "dress",
-    "earring",
+    "earring", "eveningwear",
     "flat",
     "glove", "gown",
     "handbag", "hat", "headband", "heel", "hoodie",
@@ -95,7 +95,7 @@ fashion_adjectives = [
     "jeweled",
     "kitten", "knee-length", "knit",
     "lace-up", "layered", "leopard", "lightweight", "longline", "loose", "low", "low-rise",
-    "matte", "maxi", "mermaid", "metallic", "midi", "mid-rise", "military", "mini", "minimalist", "miniskirt", "monochrome",
+    "matte", "maxi", "mermaid", "metallic", "midi", "mid-rise", "military", "mini", "miniskirt", "monochrome",
     "naked", "nap", "neon",
     "off-the-shoulder", "ombre", "over-the-knee", "oversize",
     "pad", "padded", "paisley", "pastel", "patchwork", "patent", "pencil", "penny", "perforated", "pillbox", "pinstripe", "plaid", "pleated",
@@ -113,7 +113,7 @@ fashion_adjectives = [
 colors = [
     "alabaster", "alice blue", "amaranth", "amber", "apple green", "apricot", "aqua", "aquamarine", "army green", "artichoke", "ash gray",
     "auburn", "avocado", "azure",
-    "baby blue", "baby pink", "barn red", "battleship gray", "beige", "bisque", "black", "black olive", "blood red", "blue", "blush",
+    "baby blue", "baby pink", "barn red", "battleship gray", "beige", "bisque", "black", "black olive", "blood red", "blue", "blush pink",
     "bone", "bottle green", "brass", "brick red", "bright blue", "bright red", "brink pink", "brown", "bubblegum", "buff", "burgundy",
     "burnt umber", "butter yellow", "butterscotch",
     "cadmium red", "cadmium yellow", "camel", "canary yellow", "candy apple red", "carmine", "carnation pink", "carrot", "celadon",
@@ -135,7 +135,7 @@ colors = [
     "oatmeal", "ochre", "olive", "onyx", "orange", "orchid", "oxblood",
     "paris green", "peach", "pear", "pearl white", "periwinkle", "persimmon", "phthalo blue", "pine green", "pink", "platinum", "plum", "polynesian blue",
     "powder blue", "pumpkin", "purple",
-    "raspberry", "rebecca purple", "red", "reddish brown", "robin egg blue", "rose", "rose gold", "rose vale", "rosewood", "royal blue",
+    "raspberry", "rebecca purple", "red", "reddish brown", "robin egg blue", "rose gold", "rose vale", "rosewood", "royal blue",
     "ruby", "ruddy blue", "russet", "rust",
     "safety orange", "safety yellow", "saffron", "sage", "salmon", "sandy brown", "sap green", "sapphire", "scarlet", "sea green",
     "seashell", "shocking pink", "silver", "sky blue", "slate gray", "spanish blue", "stone gray",
@@ -148,11 +148,17 @@ colors = [
 
 aesthetics = [
     "minimalist", "maximalist", "boho", "preppy", "grunge", "punk",
-    "goth", "sporty", "western", "romantic", "edgy", "coquette", 
+    "goth", "sporty", "edgy", "coquette", 
     "clean girl", "showgirl", "boho-grunge", "gorpcore", "quiet luxury", 
-    "old money", "balletcore", "cottagecore", "Y2K", "mob wife"
+    "old money", "balletcore", "cottagecore", "y2k", "mob wife"
 ]
 
+prints = [
+       "animal print", "leopard print", "leopard", "cheetah", "zebra", "snakeskin",
+       "snake print", "croc", "cow print", "tiger stripe", "plaid", "gingham",
+       "houndstooth", "polka dot", "stripe", "paisley", "floral", "tartan",
+       "argyle", "camo", "check",
+]
 
 fashion_collections = [
     "haute couture", "couture", "ready-to-wear", "womenswear", "menswear" 
@@ -180,4 +186,20 @@ variants = {
     "semi-sheer": ["semi sheer"],
     "faux fur": ["fake fur", "faux-fur"],
     "t-shirt": ["t-shirts"],
+}
+
+season_variants = {
+    "spring": ["spring", "ss", "s-s", "s/s", "spring/summer", "spring summer", "spring-summer"],
+    "fall": ["fw", "aw", "f/w", "a/w", "fall/winter", "autumn/winter", "autumn", "fall", "fall-winter", "autumn-winter", "fall winter", "autumn winter"],
+    "resort": ["resort", "cruise"],
+    "pre-fall": ["prefall", "pre fall", "pre/fall", "pre-fall"],
+    "winter": ["winter"],
+    "summer": ["summer"]
+}
+
+excluded_phrases = {
+    "devil wears prada",
+    "red carpet",
+    "black tie",
+    "black friday"
 }

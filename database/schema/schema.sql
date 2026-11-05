@@ -1,85 +1,46 @@
--- SQL SCRIPTS
+-- Fashion Data Vault: current database schema.
+-- Reference only: describes how the database looks now.
+-- Changes to an existing database go in database/migrations/, applied in order.
 
-DROP TABLE IF EXISTS aggregates_trend;
+CREATE TABLE IF NOT EXISTS aggregates_trend (id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+                                                                         source_type TEXT NOT NULL, -- Data source (RSS, Google Trends, Social APIs)
+ source_name TEXT NOT NULL, -- Outlet (Vogue, Elle, Business of Fashion, ...)
+ title TEXT NOT NULL,
+            content TEXT, -- RSS teaser; full articles are not collected
+ keywords TEXT[], link TEXT NOT NULL,
+                            published_at TIMESTAMP, -- Original publish time, if available
+ collected_at TIMESTAMP NOT NULL DEFAULT NOW(),
+                                         metadata JSONB DEFAULT '{}', -- Source-specific data
+ CONSTRAINT unique_source_link UNIQUE (source_name,
+                                       link));
 
--- V2 Normalizing data - centralized table for aggregated trends
+-- One row per (article, entity), so an entity counts once per article.
+-- Re-extracting an article replaces its rows (delete, then insert).
 
-CREATE TABLE aggregates_trend (id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-                                                           source_type TEXT NOT NULL, -- Data source (RSS, Google Trends, Social APIs)
- source_name TEXT NOT NULL, -- Data name (Vogue, Google, Pinterest)
- title TEXT NOT NULL, -- Headline or title
- content TEXT, -- Full text if available
- keywords TEXT[], -- Extracted fashion trend keywords
- link TEXT NOT NULL, -- CHANGED Link back to the original source
- published_at TIMESTAMP, -- Original publish time (if available)
- collected_at TIMESTAMP NOT NULL DEFAULT NOW(), -- Time when it was fetched
- metadata JSONB DEFAULT '{}', -- For storing source specific data
- CONSTRAINT unique_source_link UNIQUE(source_name, link) -- Prevent duplicates
-);
-
--- Creating a new table to track the counts of trends, seasons, brands, and material mentions.
-
-CREATE TABLE IF NOT EXISTS trend_summary (id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-                                                                      entity_type TEXT NOT NULL, -- trend, season, brand, material
- entity_value TEXT NOT NULL, -- if trend: leather jacket, if season: FW2026, etc.
- count INTEGER NOT NULL, -- but what if there's no count, well if there were not then it wouldnt even be here
- snapshot_date DATE NOT NULL, -- The date that this summary is for (kind of like published date (remember we're doing daily snapshots now which prevents overlaps and is overall cleaner))
- created_at TIMESTAMP DEFAULT NOW(), -- when this record was created
- CONSTRAINT unique_values UNIQUE(entity_type, entity_value, snapshot_date) -- prevent duplicates for the same entity and period
-);
-
--- Drop (delete) an existing table
-
-SELECT DISTINCT entity_type
-FROM trend_summary;
+CREATE TABLE IF NOT EXISTS article_entities
+    (article_id UUID NOT NULL REFERENCES aggregates_trend (id) ON DELETE CASCADE,
+                                                                         entity_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+                                                                                                            entity_type TEXT NOT NULL, -- trend, brand, season, material, color, aesthetic, collection
+ entity_value TEXT NOT NULL,
+                   extracted_at TIMESTAMPTZ DEFAULT NOW() NOT NULL,
+                                                          CONSTRAINT unique_article_entities_values UNIQUE (article_id,
+                                                                                                            entity_type,
+                                                                                                            entity_value));
 
 
-DROP TABLE IF EXISTS trend_summary;
+CREATE INDEX IF NOT EXISTS article_entities_lookup ON article_entities (entity_type, entity_value);
 
--- To view aggregates_trend table
+-- Daily counts for the API, computed from article_entities.
+-- Replaced the old trend_summary table (migration 002).
 
-DELETE
-FROM aggregates_trend
-WHERE source_name = 'Women''s Wear Daily';
-
-
-SELECT id,
-       source_type,
-       source_name,
-       title,
-       content,
-       keywords,
-       link,
-       published_at,
-       collected_at,
-       metadata
-FROM public.aggregates_trend
-LIMIT 1000;
-
-
-SELECT COUNT(*)
-FROM aggregates_trend
-WHERE source_name = 'Vogue';
-
-
-SELECT COUNT(*)
-FROM aggregates_trend;
-
-
-SELECT COUNT(*)
-FROM trend_summary;
-
-
-SELECT COUNT(*) -- Counts everything
-FROM public.aggregates_trend;
-
-
-SELECT DATE(published_at) as publish_date,
-       COUNT(*) as article_count
-FROM aggregates_trend
-GROUP BY DATE(published_at)
-ORDER BY publish_date DESC;
-
-
-DELETE
-FROM trend_summary;
+CREATE OR REPLACE VIEW trend_summary AS
+SELECT e.entity_type,
+       e.entity_value,
+       COUNT(*)::int AS count,
+       a.published_at::date AS snapshot_date
+FROM article_entities e
+JOIN aggregates_trend a ON a.id = e.article_id
+WHERE a.published_at IS NOT NULL
+GROUP BY e.entity_type,
+         e.entity_value,
+         a.published_at::date;

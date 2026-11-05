@@ -5,15 +5,12 @@ from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 from database.db_connection import get_connection
 from spacy.matcher import Matcher
-from spacy.pipeline import EntityRuler
 from collections import Counter
-# from backend.shared.utils.logging_config import configure_logging
-from backend.services.nlp import nlp_pipeline
+from backend.services.nlp import nlp_pipeline # Registers the merge_vocab_phrases factory
 from backend.services.nlp.vocabulary import (
-    aesthetics, colors, materials, fashion_brands, fashion_nouns, fashion_adjectives, fashion_collections
+    aesthetics, prints, colors, materials, fashion_brands, fashion_nouns, fashion_adjectives, fashion_collections, excluded_phrases
 )
 
-# configure_logging() # DELETE THIS BUT VERIFY
 logger = logging.getLogger(__name__)
 
 # Setting my local timezone for accurate trend collection and analysis (Change to ET or UTC!)
@@ -21,6 +18,25 @@ local_timezone = ZoneInfo("America/Denver")
 
 class EntityExtractor:
     """Extract fashion entities from RSS articles using spaCy's NLP."""
+    LABEL_TO_TYPE = {
+    "FASHION_SEASON": "season",
+    "COLLECTION_TYPE": "collection",
+    "FASHION_BRAND": "brand",
+    "MATERIAL": "material",
+    "PRINT": "print",
+    "AESTHETIC": "aesthetic",
+    "COLOR": "color"
+    }
+
+    LABEL_TO_VOCAB = {
+    "FASHION_BRAND": fashion_brands,
+    "COLOR": colors,
+    "MATERIAL": materials,
+    "PRINT": prints,
+    "AESTHETIC": aesthetics,
+    "COLLECTION_TYPE": fashion_collections,
+    "EXCLUDE": excluded_phrases,
+    }
 
     # Initializing the object and defining its defaults.
     def __init__(self):
@@ -30,8 +46,8 @@ class EntityExtractor:
         self.nlp.add_pipe("merge_vocab_phrases", last = True)
     
     # =================== Loading Articles by Date ===================
-    def load_articles(self, date):
-        """Load articles from the database for the last n days."""
+    def load_articles(self, target_date):
+        """Load articles from the database for the target days."""
         
         try:
             query = """
@@ -43,16 +59,16 @@ class EntityExtractor:
             # TODO: LIMIT %s might be useful for preventing overloading
 
             with get_connection() as conn:
-                data_frame = pd.read_sql(query, conn, params = (date,))
+                data_frame = pd.read_sql(query, conn, params = (target_date,))
 
             data_frame["full_text"] = (data_frame["title"].fillna("") + " " + data_frame["content"].fillna("")).str.strip()
 
-            logger.info("Loaded %d article(s) for date: %s.", len(data_frame), date)
+            logger.info("Loaded %d article(s) for date: %s.", len(data_frame), target_date)
 
             return data_frame
         
         except Exception as err:
-            logger.error("Error loading articles for date %s: %s", date, err, exc_info = True)
+            logger.error("Error loading articles for date %s: %s", target_date, err, exc_info = True)
             raise
     
     # =================== Define Matcher for Trend Detection ===================
@@ -97,9 +113,9 @@ class EntityExtractor:
 
         return matcher
 
-    # =================== Define Entity Ruler for Season, Brand, and Material Extraction ===================
+    # =================== Define Entity Ruler===================
     def define_entity_ruler(self):
-        """Revised Entity Ruler patterns for seasons, brands, and materials."""
+        """Revised Entity Ruler patterns."""
         
         ruler = self.nlp.add_pipe("entity_ruler", before = "ner")
 
@@ -256,48 +272,183 @@ class EntityExtractor:
                     {"LOWER": "fall"}
                 ]
             },
-
         ]
 
-        # Aesthetics Pattern (boho-grunge, Y2K, clean girl)
-        aesthetics_pattern = [
-            {"label": "AESTHETIC", "pattern": aesthetic.lower()}
-            for aesthetic in aesthetics
+        patterns = [
+            {"label": label, "pattern": term.lower()}
+            for label, terms in self.LABEL_TO_VOCAB.items()
+            for term in terms
         ]
-
-        # Brand Names Patterns
-        brands_pattern = [
-            {"label": "FASHION_BRAND", "pattern": brand.lower()}
-            for brand in fashion_brands
-        ] 
-
-        # Color Patterns
-        colors_pattern = [
-            {"label": "COLOR", "pattern": color.lower()}
-            for color in colors
-        ]
-
-        # Fashion Collection Patterns
-        fashion_collections_pattern = [
-            {"label": "COLLECTION_TYPE", "pattern": fashion_collection.lower()}
-            for fashion_collection in fashion_collections
-        ]
-
-        # Materials Patterns
-        materials_pattern = [
-            {"label": "MATERIAL", "pattern": material.lower()}
-            for material in materials
-        ]
-
-        # Adding the new patterns to the entity ruler
-        ruler.add_patterns(fashion_seasons_pattern)
-        ruler.add_patterns(brands_pattern)
-        ruler.add_patterns(colors_pattern)
-        ruler.add_patterns(materials_pattern)
-        ruler.add_patterns(aesthetics_pattern)
-        ruler.add_patterns(fashion_collections_pattern)
+        patterns += fashion_seasons_pattern
+        ruler.add_patterns(patterns)
         return ruler
+
+    def extract_article_entities(self, text):
+        """ Extract article entities.
+        
+        Perform NLP analysis per articles served. Return the set of (entity_type, entity_value) pairs found in the text.
+        
+        Args:
+            text: Full text of one article.
+            
+        Returns:
+            entities: Set of (entity_type, entity_value) pairs.
+        """
+        try:
+            if not text: 
+                return set()
+            
+            doc = self.nlp(text)
+            matches = self.matcher(doc)
+            
+            found_entities = set()
+
+            for _, start, end in matches:
+                span = doc[start:end]
+                trend = span.lemma_
+                found_entities.add(("trend", trend))
+
+            for ent in doc.ents:
+                entity_type = self.LABEL_TO_TYPE.get(ent.label_)
+                if entity_type is not None:
+                    found_entities.add((entity_type, ent.text))       
+
+            logger.debug("Found %d entities in article: %s", len(found_entities), sorted(found_entities))
+            
+            return found_entities
+            
+        except Exception as err:    
+            logger.error("Failed to extract article's entities: %s", err, exc_info = True)
+            raise 
+
+    def save_article_entities_to_database(self, article_id, entities, conn):
+        """Replace one article's saved entities with the newly extracted ones.
+
+            Deletes the article's existing rows and inserts the new ones in a single
+            transaction, then commits. The caller owns the connection and closes it.
+
+            Args:
+                article_id: UUID of the article in aggregates_trend.
+                entities: Set of (entity_type, entity_value) pairs.
+                conn: Open psycopg connection.
+
+            Returns:
+                int: Number of rows saved.
+         """
+        try:
+            rows = [(article_id, entity_type, value) for entity_type, value in entities]
+            with conn.cursor() as cur:
+                cur.execute("DELETE FROM article_entities WHERE article_id = %s", (article_id,))             
+                cur.executemany("INSERT INTO article_entities (article_id, entity_type, entity_value) VALUES (%s, %s, %s)", rows)
+            conn.commit()
+            logger.debug("Saved %d entities for article %s.", len(rows), article_id)
+            return len(rows)
+        
+        except Exception as err:
+            conn.rollback()
+            logger.error("Failed to save entities for article %s: %s", article_id, err, exc_info = True)
+            raise
     
+    def process_articles(self, data_frame, conn):
+        """ Extract entities for every article in the DataFrame and save them. 
+        
+        Args:
+            data_frame: Articles to process, with "id" and "full_text" columns.
+            conn: Open psycopg connection.
+
+        Returns:
+            int: Number of articles processed.
+        """
+        article_count = 0
+        articles_with_entities = 0
+        total_entities = 0
+        distinct_trends = set()
+
+        try:
+            for _, row in data_frame.iterrows():
+                entities_found = self.extract_article_entities(row["full_text"])   
+                self.save_article_entities_to_database(row["id"], entities_found, conn)
+
+                article_count += 1
+                total_entities += len(entities_found)
+                if entities_found:
+                    articles_with_entities += 1
+                distinct_trends.update(value for entity_type, value in entities_found if entity_type == "trend")
+
+            logger.info(
+                "Processed %d article(s): %d with entities, %d entities saved, %d distinct trend(s).",
+                article_count, articles_with_entities, total_entities, len(distinct_trends),
+            )
+            return article_count
+
+        except Exception as err:
+            logger.error("Extraction process failed: %s", err, exc_info = True)
+            raise
+    
+    def backfill(self):     
+        """ Backfill data from a specified date up to today.
+        
+        Pick every date from the start date to today, one day at a time, load articles, and call the processor.
+        
+        Args:
+            None
+
+        Returns:
+            None
+        """   
+        try:
+            processed_dates = 0
+            total_articles = 0
+            start_date =  date(2025, 11, 1)
+            current_date = start_date
+            end_date = datetime.now(local_timezone).date()     
+            delta = timedelta(days = 1)
+
+            logger.info("Starting backfill from %s to %s.", start_date, end_date)
+
+            while current_date <= end_date:
+                data_frame = self.load_articles(current_date)
+                if len(data_frame) > 0:
+                    logger.info("Processing current date: %s with total number of articles: %d.", current_date, len(data_frame))
+                    with get_connection() as conn:
+                        total_articles += self.process_articles(data_frame, conn)
+                    
+                    processed_dates += 1  
+
+                else:
+                    logger.debug("No articles found for date: %s.", current_date)      
+                
+                current_date += delta
+            
+            logger.info("Backfill process completed. Total number of dates processed: %d. Total number of articles processed: %d.", processed_dates, total_articles)
+     
+        except Exception as err:
+            logger.error("Backfill process failed: %s", err, exc_info = True)
+            raise
+
+    def daily_analysis(self):
+        """ Perform analysis for the specified date.
+        
+        Run the daily analysis, load articles and call the processor.
+        
+        Args:
+            None
+
+        Returns:
+            None
+        """
+        try:
+            today = datetime.now(local_timezone).date()
+            data_frame = self.load_articles(today)
+            with get_connection() as conn:
+                count = self.process_articles(data_frame, conn)
+
+                logger.info("Daily analysis completed successfully. Total number of articles processed: %d.", count)
+                
+        except Exception as err:
+            logger.error("Daily analysis failed: %s", err, exc_info = True)
+            raise
+
     # =================== Extract Trends ===================
     def extract_trends(self, data_frame = None):
         """Run trend extraction over collected articles to identify trends."""
@@ -456,7 +607,6 @@ class EntityExtractor:
                 with conn.cursor() as cur:
                     for entity_type, entity_counts in entities.items():
                         for entity_value, count in entity_counts.items():
-                            # print(f"Entity Type is: {entity_type} | Entity Value is: {entity_value} | Count is: {count} | Time Window is: {time_window} days |\n Snapshot Date is {datetime.now().date()})
 
                             cur.execute(query, (
                                 entity_type,
@@ -482,53 +632,4 @@ class EntityExtractor:
         
         except Exception as err:
             logger.error("Failed to save results to database: %s", err, exc_info = True)
-            raise
-
-
-    # =================== Backfilling Data ===================
-    def backfill(self):
-        try:
-            start_date =  date(2026, 10, 16) # Starting from November 1st (anything prior is too scattered) (i reaaaally need to setup a cron job)
-            # start_date = datetime.now(local_timezone).date() - timedelta(days = 1) # For testing, backfill the last 5 days
-            current_date = start_date
-            end_date = datetime.now(local_timezone).date() # Backfill up to today (4/15/26)
-
-            # Using timedelta to increment our current date by one day per iteration until we reach end date
-            delta = timedelta(days = 1)
-
-            logger.info("Starting backfill from %s to %s.", start_date, end_date)
-            processed_dates = 0 # For debugging delete after
-
-            while current_date <= end_date:
-                df = self.load_articles(current_date)
-                if len(df) > 0:
-                    logger.info("Processing current date: %s with total number of articles: %d.", current_date, len(df))
-        
-                    trend_counts = self.extract_trends(df)
-                    season_counts, collection_counts, brand_counts, material_counts, color_counts, aesthetic_counts = self.extract_entities(df)
-                    self.save_results_to_database(trend_counts, season_counts, collection_counts, brand_counts, material_counts, color_counts, aesthetic_counts, snapshot_date = current_date)
-                    processed_dates += 1     
-                else:
-                    logger.debug("No articles found for date: %s.", current_date)      
-                
-                current_date += delta
-            
-            logger.info("Backfill process completed. Total number of dates processed: %d.", processed_dates)
-        
-        except Exception as err:
-            logger.error("Backfill process failed: %s", err, exc_info = True)
-            raise
-
-    # =================== Daily Analysis ===================
-    def daily_analysis(self):
-        """Run daily analysis: load articles, extract trends and entities, and save results to the database."""        
-        try:
-            today = datetime.now(local_timezone).date()
-            data_frame = self.load_articles(today)
-            trend_counts = self.extract_trends(data_frame)
-            season_counts, collection_counts, brand_counts, material_counts, color_counts, aesthetic_counts = self.extract_entities(data_frame)
-            self.save_results_to_database(trend_counts, season_counts, collection_counts, brand_counts, material_counts, color_counts, aesthetic_counts, snapshot_date = today)
-            logger.info("Daily analysis completed successfully.")
-        except Exception as err:
-            logger.error("Daily analysis failed: %s", err, exc_info = True)
             raise
