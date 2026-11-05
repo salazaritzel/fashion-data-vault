@@ -111,5 +111,3 @@ def test_process_articles_saves_each_article(extractor, conn):
 def test_process_articles_with_no_articles_returns_zero(extractor, conn):
     data_frame = pd.DataFrame({"id": [], "full_text": []})
     assert extractor.process_articles(data_frame, conn) == 0
-
-       

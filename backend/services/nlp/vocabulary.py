@@ -86,7 +86,7 @@ fashion_adjectives = [
     "boyfriend", "button-down", "button-up",
     "cable", "camo", "capri", "cargo", "cheeky", "cheetah", "chunky", "collar", "colorful", "column", "corset", "cow print", "cowboy", "cowl", "cozy",
     "crew", "crew-neck", "croc", "crop", "crossbody", "cutout",
-    "distress", "distressed", "double-breasted", "drape", "duster",
+    "deer print", "distress", "distressed", "double-breasted", "drape", "duster",
     "embellish", "embossed", "embroider",
     "faded", "faux", "fit", "fitted", "flare", "floor-length", "floral", "flowy", "fray", "frayed", "fringe", "full",
     "gladiator", "glossy", "graphic",
@@ -147,17 +147,17 @@ colors = [
 ]
 
 aesthetics = [
-    "minimalist", "maximalist", "boho", "preppy", "grunge", "punk",
+    "maximalist", "boho", "preppy", "grunge", "punk",
     "goth", "sporty", "edgy", "coquette", 
     "clean girl", "showgirl", "boho-grunge", "gorpcore", "quiet luxury", 
     "old money", "balletcore", "cottagecore", "y2k", "mob wife"
 ]
 
 prints = [
-       "animal print", "leopard print", "leopard", "cheetah", "zebra", "snakeskin",
-       "snake print", "croc", "cow print", "tiger stripe", "plaid", "gingham",
-       "houndstooth", "polka dot", "stripe", "paisley", "floral", "tartan",
-       "argyle", "camo", "check",
+       "animal print", "leopard print", "leopard print", "cheetah print", "zebra print", "snakeskin",
+       "snake print", "croc", "cow print", "tiger stripe", "plaid", "gingham", "deer print"
+       "houndstooth", "polka dot", "pinstripe", "paisley", "floral", "tartan",
+       "argyle", "camo"
 ]
 
 fashion_collections = [

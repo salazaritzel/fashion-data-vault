@@ -74,7 +74,10 @@ return (
               <SelectItem value="trend">Trends</SelectItem>
               <SelectItem value="brand">Brands</SelectItem>
               <SelectItem value="material">Materials</SelectItem>
+              <SelectItem value="color">Colors</SelectItem>
               <SelectItem value="season">Seasons</SelectItem>
+              <SelectItem value="aesthetic">Aesthetics</SelectItem>
+              <SelectItem value="print">Prints</SelectItem>
             </SelectGroup>
           </SelectContent>
 
