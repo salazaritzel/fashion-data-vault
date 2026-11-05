@@ -81,33 +81,33 @@ fashion_nouns = [
 ]
 
 fashion_adjectives = [
-    "argyle", "asymmetrical", "a-line",
+    "a-line", "animal print", "argyle", "asymmetrical",
     "babydoll", "backless", "baggy", "ballet", "balloon", "barn", "barrel", "basic", "bespoke", "birkin", "bodycon", "bomber", "bootcut", "boxy",
     "boyfriend", "button-down", "button-up",
-    "cable", "camo", "capri", "cargo", "cheeky", "chunky", "collar", "colorful", "column", "corset", "cowboy", "cowl", "cozy", "crew", "crew-neck", "crop", "crossbody",
-    "cutout",
+    "cable", "camo", "capri", "cargo", "cheeky", "cheetah", "chunky", "collar", "colorful", "column", "corset", "cow print", "cowboy", "cowl", "cozy",
+    "crew", "crew-neck", "croc", "crop", "crossbody", "cutout",
     "distress", "distressed", "double-breasted", "drape", "duster",
     "embellish", "embossed", "embroider",
     "faded", "faux", "fit", "fitted", "flare", "floor-length", "floral", "flowy", "fray", "frayed", "fringe", "full",
     "gladiator", "glossy", "graphic",
-    "halter", "handcrafted", "high-rise", "herringbone", "holographic", "houndstooth", "hug",
+    "halter", "handcrafted", "herringbone", "high-rise", "holographic", "houndstooth", "hug",
     "iridescent",
     "jeweled",
     "kitten", "knee-length", "knit",
-    "lace-up", "layered", "leopard", "lightweight", "longline", "loose", "low", "low-rise",
+    "lace-up", "layered", "leopard", "leopard print", "lightweight", "longline", "loose", "low", "low-rise",
     "matte", "maxi", "mermaid", "metallic", "midi", "mid-rise", "military", "mini", "miniskirt", "monochrome",
     "naked", "nap", "neon",
     "off-the-shoulder", "ombre", "over-the-knee", "oversize",
     "pad", "padded", "paisley", "pastel", "patchwork", "patent", "pencil", "penny", "perforated", "pillbox", "pinstripe", "plaid", "pleated",
-    "plunge", "polish", "polka", "polo", "prairie", "print",
+    "plunge", "polish", "polka", "polka dot", "polo", "prairie", "print",
     "quilt", "quilted",
     "relax", "retro", "rib", "ribbed", "ruche", "ruched", "ruffle",
-    "scoop", "sculptural", "semi-sheer", "sheer", "shimmer", "shoulder", "skinny", "skinny-leg", "skirt", "sleek", "sleeveless", "slim", "slip", "slouchy", "smock",
-    "smocked", "snakeskin", "straight", "straight-leg", "strapless", "strappy", "striped", "structure", "stud", "studded", "sweatpant",
-    "tailor", "tall", "tank", "tapered", "tartan", "thigh-high", "tennis", "tiered", "tote", "track", "trench", "trim",
+    "scoop", "sculptural", "semi-sheer", "sheer", "shimmer", "shoulder", "skinny", "skinny-leg", "skirt", "sleek", "sleeveless", "slim", "slip", "slouchy",
+    "smock", "smocked", "snake print", "snakeskin", "straight", "straight-leg", "strapless", "strappy", "striped", "structure", "stud", "studded", "sweatpant",
+    "tailor", "tall", "tank", "tapered", "tartan", "tennis", "thigh-high", "tiered", "tiger stripe", "tote", "track", "trench", "trim",
     "vintage", "voluminous", "v-neck",
     "weave", "wedge", "wide-leg", "wrap",
-    "zebra"
+    "zebra",
 ]
 
 colors = [
