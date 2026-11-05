@@ -77,7 +77,6 @@ return (
               <SelectItem value="color">Colors</SelectItem>
               <SelectItem value="season">Seasons</SelectItem>
               <SelectItem value="aesthetic">Aesthetics</SelectItem>
-              <SelectItem value="print">Prints</SelectItem>
             </SelectGroup>
           </SelectContent>
 
