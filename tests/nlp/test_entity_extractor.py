@@ -35,6 +35,18 @@ def test_accurate_color_or_aesthetic(extractor):
     assert ("aesthetic", "y2k") in result
     assert ("color", "magenta") in result
 
+def test_red_carpet_is_not_a_color(extractor):
+    result = extractor.extract_article_entities("she was spotted on the red carpet.")
+    assert ("color", "red") not in result
+
+def test_devil_wears_prada_is_not_a_brand(extractor):
+    result = extractor.extract_article_entities("the devil wears prada 2 premieres in new york.")
+    assert ("brand", "prada") not in result
+
+def test_red_dress_is_still_a_color(extractor):
+    result = extractor.extract_article_entities("she wore a lovely red dress tonight.")
+    assert ("color", "red") in result
+
 def make_article(conn):
     """Insert a throwaway article (the foreign key needs one) and return its id."""
     with conn.cursor() as cur:
